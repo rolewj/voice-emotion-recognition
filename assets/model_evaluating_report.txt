@@ -1,0 +1,610 @@
+Emotion Counts:
+Anger: 8
+Disgust: 21
+Fear: 16
+Happy: 10
+Neutral: 2
+Sad: 3
+
+Detailed Predictions:
+
+File: datasets\RAVDESS\Actor_19\03-01-01-01-01-01-19.wav
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 1.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-01-01-01-02-19.wav
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0020
+Fear: 0.7634
+Happy: 0.2345
+Neutral: 0.0002
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-01-01-02-01-19.wav
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.4239
+Fear: 0.5752
+Happy: 0.0000
+Neutral: 0.0008
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-01-01-02-02-19.wav
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 1.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-02-01-01-01-19.wav
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.2658
+Fear: 0.2849
+Happy: 0.0137
+Neutral: 0.0000
+Sad: 0.4356
+
+File: datasets\RAVDESS\Actor_19\03-01-02-01-01-02-19.wav
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.3806
+Fear: 0.6064
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0130
+
+File: datasets\RAVDESS\Actor_19\03-01-02-01-02-01-19.wav
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0123
+Fear: 0.9876
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-02-01-02-02-19.wav
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 1.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-02-02-01-01-19.wav
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.1461
+Fear: 0.0914
+Happy: 0.0000
+Neutral: 0.0001
+Sad: 0.7624
+
+File: datasets\RAVDESS\Actor_19\03-01-02-02-01-02-19.wav
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9999
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0001
+
+File: datasets\RAVDESS\Actor_19\03-01-02-02-02-01-19.wav
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0541
+Fear: 0.0010
+Happy: 0.9434
+Neutral: 0.0013
+Sad: 0.0001
+
+File: datasets\RAVDESS\Actor_19\03-01-02-02-02-02-19.wav
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.1304
+Fear: 0.0010
+Happy: 0.0001
+Neutral: 0.0480
+Sad: 0.8205
+
+File: datasets\RAVDESS\Actor_19\03-01-03-01-01-01-19.wav
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.8198
+Fear: 0.1650
+Happy: 0.0143
+Neutral: 0.0005
+Sad: 0.0005
+
+File: datasets\RAVDESS\Actor_19\03-01-03-01-01-02-19.wav
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9986
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0014
+
+File: datasets\RAVDESS\Actor_19\03-01-03-01-02-01-19.wav
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9993
+Fear: 0.0000
+Happy: 0.0006
+Neutral: 0.0000
+Sad: 0.0001
+
+File: datasets\RAVDESS\Actor_19\03-01-03-01-02-02-19.wav
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0125
+Fear: 0.0001
+Happy: 0.9858
+Neutral: 0.0015
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-03-02-01-01-19.wav
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.4582
+Fear: 0.5418
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-03-02-01-02-19.wav
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.9922
+Happy: 0.0078
+Neutral: 0.0000
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-03-02-02-01-19.wav
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0025
+Disgust: 0.0000
+Fear: 0.0722
+Happy: 0.9234
+Neutral: 0.0019
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-03-02-02-02-19.wav
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0018
+Disgust: 0.9977
+Fear: 0.0000
+Happy: 0.0003
+Neutral: 0.0002
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-04-01-01-01-19.wav
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0800
+Fear: 0.9196
+Happy: 0.0003
+Neutral: 0.0001
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-04-01-01-02-19.wav
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.1795
+Fear: 0.8205
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-04-01-02-01-19.wav
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 1.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-04-01-02-02-19.wav
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9257
+Fear: 0.0237
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0505
+
+File: datasets\RAVDESS\Actor_19\03-01-04-02-01-01-19.wav
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0052
+Fear: 0.0006
+Happy: 0.0000
+Neutral: 0.9942
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-04-02-01-02-19.wav
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9997
+Fear: 0.0002
+Happy: 0.0000
+Neutral: 0.0001
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-04-02-02-01-19.wav
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0072
+Fear: 0.9927
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0001
+
+File: datasets\RAVDESS\Actor_19\03-01-04-02-02-02-19.wav
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9763
+Fear: 0.0236
+Happy: 0.0000
+Neutral: 0.0001
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-05-01-01-01-19.wav
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.7691
+Disgust: 0.1072
+Fear: 0.0550
+Happy: 0.0204
+Neutral: 0.0483
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-05-01-01-02-19.wav
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.7218
+Fear: 0.2782
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-05-01-02-01-19.wav
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9088
+Fear: 0.0067
+Happy: 0.0844
+Neutral: 0.0000
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-05-01-02-02-19.wav
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0051
+Disgust: 0.3982
+Fear: 0.0935
+Happy: 0.4306
+Neutral: 0.0726
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-05-02-01-01-19.wav
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.7734
+Disgust: 0.2163
+Fear: 0.0002
+Happy: 0.0101
+Neutral: 0.0000
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-05-02-01-02-19.wav
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.3546
+Disgust: 0.0277
+Fear: 0.6166
+Happy: 0.0011
+Neutral: 0.0000
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-05-02-02-01-19.wav
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9824
+Disgust: 0.0001
+Fear: 0.0145
+Happy: 0.0015
+Neutral: 0.0015
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-05-02-02-02-19.wav
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0019
+Disgust: 0.0017
+Fear: 0.0131
+Happy: 0.9831
+Neutral: 0.0002
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-06-01-01-01-19.wav
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0164
+Happy: 0.9835
+Neutral: 0.0000
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-06-01-01-02-19.wav
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 1.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-06-01-02-01-19.wav
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0827
+Fear: 0.0926
+Happy: 0.7727
+Neutral: 0.0520
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-06-01-02-02-19.wav
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9723
+Fear: 0.0277
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-06-02-01-01-19.wav
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.8829
+Disgust: 0.0000
+Fear: 0.1168
+Happy: 0.0003
+Neutral: 0.0000
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-06-02-01-02-19.wav
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9713
+Disgust: 0.0266
+Fear: 0.0020
+Happy: 0.0001
+Neutral: 0.0000
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-06-02-02-01-19.wav
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0015
+Disgust: 0.5877
+Fear: 0.4108
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-06-02-02-02-19.wav
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.8616
+Disgust: 0.1268
+Fear: 0.0028
+Happy: 0.0088
+Neutral: 0.0000
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-07-01-01-01-19.wav
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.5316
+Fear: 0.0049
+Happy: 0.4570
+Neutral: 0.0052
+Sad: 0.0012
+
+File: datasets\RAVDESS\Actor_19\03-01-07-01-01-02-19.wav
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0016
+Fear: 0.0006
+Happy: 0.0000
+Neutral: 0.9978
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-07-01-02-01-19.wav
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0000
+Disgust: 0.2913
+Fear: 0.0000
+Happy: 0.7049
+Neutral: 0.0002
+Sad: 0.0036
+
+File: datasets\RAVDESS\Actor_19\03-01-07-01-02-02-19.wav
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9979
+Fear: 0.0009
+Happy: 0.0001
+Neutral: 0.0008
+Sad: 0.0002
+
+File: datasets\RAVDESS\Actor_19\03-01-07-02-01-01-19.wav
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0007
+Disgust: 0.0047
+Fear: 0.0078
+Happy: 0.9861
+Neutral: 0.0007
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-07-02-01-02-19.wav
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.1728
+Disgust: 0.7711
+Fear: 0.0553
+Happy: 0.0009
+Neutral: 0.0000
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-07-02-02-01-19.wav
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9938
+Disgust: 0.0011
+Fear: 0.0018
+Happy: 0.0033
+Neutral: 0.0000
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-07-02-02-02-19.wav
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.2256
+Disgust: 0.7647
+Fear: 0.0000
+Happy: 0.0097
+Neutral: 0.0000
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-08-01-01-01-19.wav
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.3654
+Fear: 0.4441
+Happy: 0.0913
+Neutral: 0.0976
+Sad: 0.0015
+
+File: datasets\RAVDESS\Actor_19\03-01-08-01-01-02-19.wav
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0015
+Fear: 0.9971
+Happy: 0.0000
+Neutral: 0.0013
+Sad: 0.0001
+
+File: datasets\RAVDESS\Actor_19\03-01-08-01-02-01-19.wav
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9980
+Fear: 0.0005
+Happy: 0.0002
+Neutral: 0.0000
+Sad: 0.0014
+
+File: datasets\RAVDESS\Actor_19\03-01-08-01-02-02-19.wav
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.8280
+Fear: 0.0002
+Happy: 0.1717
+Neutral: 0.0000
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-08-02-01-01-19.wav
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.4154
+Disgust: 0.3406
+Fear: 0.0026
+Happy: 0.1606
+Neutral: 0.0598
+Sad: 0.0209
+
+File: datasets\RAVDESS\Actor_19\03-01-08-02-01-02-19.wav
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.1625
+Disgust: 0.8362
+Fear: 0.0000
+Happy: 0.0004
+Neutral: 0.0009
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-08-02-02-01-19.wav
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0000
+Disgust: 0.2648
+Fear: 0.0000
+Happy: 0.7056
+Neutral: 0.0297
+Sad: 0.0000
+
+File: datasets\RAVDESS\Actor_19\03-01-08-02-02-02-19.wav
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0002
+Fear: 0.9996
+Happy: 0.0000
+Neutral: 0.0002
+Sad: 0.0000
+
