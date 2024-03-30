@@ -17,7 +17,7 @@ from tensorflow.keras.layers import Dense, Conv1D, MaxPooling1D, Flatten, Dropou
 from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping, ReduceLROnPlateau
 
 
-def build_model(input_shape):
+def build_model(num_emotions, input_shape):
     cnn = tf.keras.Sequential([
         L.Conv1D(256,kernel_size=5, strides=1,padding='same', activation='relu',input_shape=(x_train.shape[1],1)),
         L.BatchNormalization(),
@@ -45,7 +45,7 @@ def build_model(input_shape):
         L.Flatten(),
         L.Dense(256,activation='relu'),
         L.BatchNormalization(),
-        L.Dense(6,activation='softmax')
+        L.Dense(num_emotions,activation='softmax')
     ])
     cnn.compile(optimizer='adam',loss='categorical_crossentropy',metrics='accuracy')
     cnn.summary()
@@ -57,8 +57,8 @@ def capture_model_summary(model):
         model.summary()
         return buf.getvalue()
 
-def train_and_evaluate_model(x_train, y_train, x_test, y_test, output_folder):
-    cnn = build_model(input_shape=(x_train.shape[1], x_train.shape[2]))
+def train_and_evaluate_model(x_train, y_train, x_test, y_test, num_emotions, output_folder):
+    cnn = build_model(num_emotions, input_shape=(x_train.shape[1], x_train.shape[2]))
     
     # Захватываем summary модели
     model_summary = capture_model_summary(cnn)
@@ -138,6 +138,7 @@ def load_data(file_path):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Тренировка и оценка CNN модели для распознавания эмоций по голосу.")
     parser.add_argument("--data_file", type=str, required=True, help="Путь к файлу с обучающими и тестовыми данными.")
+    parser.add_argument("--num_emotions", type=int, required=True, help="Количество эмоций для распознавания.")
     parser.add_argument("--output_folder", type=str, required=True, help="Путь к папке для сохранения обученной модели и отчетов.")
     
     args = parser.parse_args()
@@ -150,5 +151,4 @@ if __name__ == "__main__":
         os.makedirs(args.output_folder)
 
     # Тренировка и оценка модели
-    train_and_evaluate_model(x_train, y_train, x_test, y_test, args.output_folder)
-
+    train_and_evaluate_model(x_train, y_train, x_test, y_test, args.num_emotions, args.output_folder)

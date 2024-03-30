@@ -4,7 +4,7 @@ import librosa
 import argparse
 import pickle
 from tensorflow.keras.models import load_model
-from glob import glob
+import glob
 import os
 
 emotions_mapping = {
@@ -130,8 +130,8 @@ def predict_and_report_modified(model, path, output_path, emotion_labels, scaler
     
     # Проверяем, является ли путь директорией
     if os.path.isdir(path):
-        # Если это директория, обходим все файлы в ней
-        file_paths = [os.path.join(path, file) for file in os.listdir(path) if file.endswith('.wav')]  # Предполагаем, что это аудиофайлы .wav
+        # Если это директория, обходим все файлы в ней и её поддиректориях
+        file_paths = glob.glob(os.path.join(path, '**/*.wav'), recursive=True)
     else:
         # Если это файл, обрабатываем его как одиночный файл
         file_paths = [path]
