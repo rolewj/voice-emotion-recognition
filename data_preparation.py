@@ -14,41 +14,52 @@ from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from joblib import Parallel, delayed
 
 
-emotions_mapping = {
-  'ANG': 'Anger',
-  'DIS': 'Disgust',
-  'FEA': 'Fear',
-  'HAP': 'Happy',
-  'NEU': 'Neutral',
-  'SAD': 'Sad',
+emotions_mapping_crema_d = {
+    'ANG': 'Anger',
+    'DIS': 'Disgust',
+    'FEA': 'Fear',
+    'HAP': 'Happy',
+    'NEU': 'Neutral',
+    'SAD': 'Sad',
 }
 
-emotion_level_mapping = {
-  'LO': 'Low',
-  'MD': 'Medium',
-  'HI': 'High',
-  'XX': 'Unspecified'
+emotions_mapping_ravdess = {
+    "01": "Neutral",
+    "02": "Calm",
+    "03": "Happy",
+    "04": "Sad",
+    "05": "Angry",
+    "06": "Fearful",
+    "07": "Disgust",
+    "08": "Surprised"
 }
 
-female_id = [ '1002', '1003', '1004', '1006', '1007', '1008', '1009',
-              '1010', '1012', '1013', '1018', '1020', '1021', '1024',
-              '1025', '1028', '1029', '1030', '1037', '1043', '1046',
-              '1047', '1049', '1052', '1053', '1054', '1055', '1056',
-              '1058', '1060', '1061', '1063', '1072', '1073', '1074',
-              '1075', '1076', '1078', '1079', '1082', '1084', '1089',
-              '1091', ]
+emotion_level_mapping_crema_d = {
+    'LO': 'Low',
+    'MD': 'Medium',
+    'HI': 'High',
+    'XX': 'Unspecified'
+}
 
-def load_and_preprocess_data(audios_folder):
-    audios = glob(f"{audios_folder}/*.wav")
+female_id_crema_d = [ '1002', '1003', '1004', '1006', '1007', '1008', '1009',
+                      '1010', '1012', '1013', '1018', '1020', '1021', '1024',
+                      '1025', '1028', '1029', '1030', '1037', '1043', '1046',
+                      '1047', '1049', '1052', '1053', '1054', '1055', '1056',
+                      '1058', '1060', '1061', '1063', '1072', '1073', '1074',
+                      '1075', '1076', '1078', '1079', '1082', '1084', '1089',
+                      '1091', ]
+
+def crema_d_load_and_preprocess_data(audios_folder):
+    audios = glob(f"{audios_folder}/**/*.wav", recursive=True)
     path_list, emotion_list, emotion_level_list, sex_list = [], [], [], []
 
     for file in audios:
         path_list.append(file)
         filename = os.path.basename(file)
         part = filename.split('_')
-        emotion = emotions_mapping.get(part[2], 'Unknown')
-        emotion_level = emotion_level_mapping.get(part[-1].replace('.wav', ''), 'Unknown')
-        sex = 'Female' if part[0] in female_id else 'Male'
+        emotion = emotions_mapping_crema_d.get(part[2], 'Unknown')
+        emotion_level = emotion_level_mapping_crema_d.get(part[-1].replace('.wav', ''), 'Unknown')
+        sex = 'Female' if part[0] in female_id_crema_d else 'Male'
         emotion_list.append(emotion)
         emotion_level_list.append(emotion_level)
         sex_list.append(sex)
@@ -56,19 +67,63 @@ def load_and_preprocess_data(audios_folder):
     crema_df = pd.concat([
         pd.DataFrame({'Path': path_list}),
         pd.DataFrame({'Emotions': emotion_list}),
-        pd.DataFrame({'Emotion levels': emotion_level_list}),
+        # pd.DataFrame({'Emotion levels': emotion_level_list}),
         pd.DataFrame({'Sex': sex_list}),
     ], axis=1)
     
-    target_file = '1040_ITH_SAD_X.wav'
-    file_exists = crema_df['Path'].str.contains(target_file).any()
-    if file_exists:
-        index_to_modify = crema_df[crema_df['Path'].str.contains(target_file)].index[0]
-        crema_df.loc[index_to_modify, 'Emotion levels'] = 'Unspecified'
-    else:
-        print(f"Файл {target_file} не найден в датасете.")
+    # target_file = '1040_ITH_SAD_X.wav'
+    # file_exists = crema_df['Path'].str.contains(target_file).any()
+    # if file_exists:
+    #     index_to_modify = crema_df[crema_df['Path'].str.contains(target_file)].index[0]
+    #     crema_df.loc[index_to_modify, 'Emotion levels'] = 'Unspecified'
+    # else:
+    #     print(f"Файл {target_file} не найден в датасете.")
     
     return crema_df
+
+def ravdess_load_and_preprocess_data(audios_folder):
+    audios = glob(f"{audios_folder}/**/*.wav", recursive=True)
+    path_list, emotion_list, actor_list = [], [], []
+
+    for file in audios:
+        path_list.append(file)
+        filename = os.path.basename(file)
+        parts = filename.split('-')
+        emotion = emotions_mapping_ravdess.get(parts[2], 'Unknown')
+        actor = int(parts[6].replace(".wav", ""))
+
+        # Определение пола актёра по идентификатору: чётные - женщины, нечётные - мужчины
+        sex = 'Female' if actor % 2 == 0 else 'Male'
+
+        emotion_list.append(emotion)
+        actor_list.append(sex)
+
+    # Создание DataFrame
+    ravdess_df = pd.DataFrame({
+        'Path': path_list,
+        'Emotions': emotion_list,
+        'Sex': actor_list
+    })
+
+    return ravdess_df
+
+def load_and_preprocess_datasets(dataset_paths, emotions_list):
+    combined_df = pd.DataFrame()
+    
+    for dataset_path in dataset_paths:
+        if "CREMA-D" in dataset_path:
+            df = crema_d_load_and_preprocess_data(dataset_path)
+        elif "RAVDESS" in dataset_path:
+            df = ravdess_load_and_preprocess_data(dataset_path)
+        else:
+            print(f"Неизвестный датасет: {dataset_path}")
+            continue
+        
+        combined_df = pd.concat([combined_df, df], ignore_index=True)
+    
+    if emotions_list:
+        combined_df = combined_df[combined_df['Emotions'].isin(emotions_list)]
+    return combined_df
 
 def zcr(data, frame_length=2048, hop_length=512):
     return np.squeeze(librosa.feature.zero_crossing_rate(data, frame_length=frame_length, hop_length=hop_length))
@@ -116,9 +171,9 @@ def process_feature(path, emotion):
     Y = [emotion] * len(features)
     return X, Y
 
-def parallel_feature_extraction(crema_df):
-    paths = crema_df['Path'].tolist()
-    emotions = crema_df['Emotions'].tolist()
+def parallel_feature_extraction(df):
+    paths = df['Path'].tolist()
+    emotions = df['Emotions'].tolist()
 
     # Параллельная обработка
     results = Parallel(n_jobs=-1, verbose=2)(delayed(process_feature)(path, emotion) for path, emotion in zip(paths, emotions))
@@ -202,13 +257,31 @@ def preprocess_features(Features, output_folder):
         pickle.dump(scaler, f)
 
     print("Encoder и Scaler успешно загружены.")
-    print("Тип объекта encoder:", type(encoder))
-    print("Тип объекта scaler:", type(scaler))
 
     x_train = np.expand_dims(x_train, axis=2)
     x_test = np.expand_dims(x_test, axis=2)
 
     return x_train, x_test, y_train, y_test
+
+def save_report(df, report_path):
+    with open(os.path.join(report_path, "data_preparation_report.txt"), 'w') as f:
+        # Распределение эмоций
+        emotion_distrib = df['Emotions'].value_counts()
+        f.write("Распределение эмоций:\n")
+        f.write(emotion_distrib.to_string())
+        f.write("\n\n")
+
+        # Распределение по полу
+        sex_distrib = df['Sex'].value_counts()
+        f.write("Распределение по полу:\n")
+        f.write(sex_distrib.to_string())
+        f.write("\n\n")
+
+        # Распределение эмоций по полу
+        emotion_sex_distrib = df.groupby(['Emotions', 'Sex']).size().unstack().fillna(0)
+        f.write("Распределение эмоций по полу:\n")
+        f.write(emotion_sex_distrib.to_string())
+        f.write("\n\n")
 
 def save_data(x_train, x_test, y_train, y_test, output_folder):
     file_path_npz = os.path.join(output_folder, 'dataset_splits.npz')
@@ -218,17 +291,18 @@ def save_data(x_train, x_test, y_train, y_test, output_folder):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Предобработка данных и извлечение признаков для обучения модели распознавания эмоций по голосу.")
-    parser.add_argument("--data_folder", type=str, required=True, help="Путь к папке с аудиофайлами.")
+    parser.add_argument("--datasets", nargs='+', required=True, help="Пути к папкам с датасетами (например, --datasets path/to/CREMA-D path/to/RAVDESS).")
     parser.add_argument("--output_folder", type=str, required=True, help="Путь к папке для сохранения результатов.")
+    parser.add_argument("--emotions", nargs="+", type=str, help="Список эмоций для включения в анализ.")
     
     args = parser.parse_args()
     
     if not os.path.exists(args.output_folder):
         os.makedirs(args.output_folder)
     
-    # Используем обновленную функцию с параллельной обработкой для извлечения признаков
-    crema_df = load_and_preprocess_data(args.data_folder)
-    Features = parallel_feature_extraction(crema_df)
+    df = load_and_preprocess_datasets(args.datasets, args.emotions)
+    save_report(df, args.output_folder)
+    Features = parallel_feature_extraction(df)
     x_train, x_test, y_train, y_test = preprocess_features(Features, args.output_folder)
     save_data(x_train, x_test, y_train, y_test, args.output_folder)
     print(f"Предобработка данных завершена. Данные сохранены в папку '{args.output_folder}'")
