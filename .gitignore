@@ -1,3 +1,4 @@
 datasets/
 assets/dataset_splits.npz
 assets/features.csv
+assets/train_paths_with_emotions.txt

@@ -169,7 +169,7 @@ def process_feature(path, emotion):
     features = get_features(path)
     X = [element for element in features]
     Y = [emotion] * len(features)
-    return X, Y
+    return X, Y, path
 
 def parallel_feature_extraction(df):
     paths = df['Path'].tolist()
@@ -181,13 +181,16 @@ def parallel_feature_extraction(df):
     # Сбор результатов
     X = []
     Y = []
+    file_paths_with_emotions = [] # Список для хранения путей к файлам вместе с эмоциями
     for result in results:
-        x, y = result
+        x, y, file_path = result
         X.extend(x)
         Y.extend(y)
+        file_paths_with_emotions.extend([f"{file_path},{emotion}" for emotion in y]) # Добавление путей к файлам с эмоциями для каждого фрагмента
 
     Features = pd.DataFrame(X)
     Features['labels'] = Y
+    Features['file_path_with_emotion'] = file_paths_with_emotions # Добавление столбца с путями к файлам и эмоциями
 
     return Features
 
@@ -236,8 +239,11 @@ def parallel_feature_extraction(df):
 def preprocess_features(Features, output_folder):
     Features = Features.fillna(0)
 
-    X = Features.iloc[:, :-1].values
+    X = Features.iloc[:, :-2].values
     Y = Features['labels'].values
+
+    # Сохранение путей к файлам
+    file_path_with_emotions = Features['file_path_with_emotion'].tolist()
 
     encoder = OneHotEncoder()
     Y = encoder.fit_transform(np.array(Y).reshape(-1, 1)).toarray()
@@ -246,7 +252,7 @@ def preprocess_features(Features, output_folder):
     with open(encoder_file_path, 'wb') as f:
         pickle.dump(encoder, f)
 
-    x_train, x_test, y_train, y_test = train_test_split(X, Y, random_state=0, shuffle=True)
+    x_train, x_test, y_train, y_test, train_paths_with_emotions, test_paths_with_emotions = train_test_split(X, Y, file_path_with_emotions, random_state=0, shuffle=True)
 
     scaler = StandardScaler()
     x_train = scaler.fit_transform(x_train)
@@ -260,6 +266,14 @@ def preprocess_features(Features, output_folder):
 
     x_train = np.expand_dims(x_train, axis=2)
     x_test = np.expand_dims(x_test, axis=2)
+    
+    train_paths_file = os.path.join(output_folder, 'train_paths_with_emotions.txt')
+    with open(train_paths_file, 'w') as f:
+        f.write('\n'.join(train_paths_with_emotions))
+    
+    test_paths_file = os.path.join(output_folder, 'test_paths_with_emotions.txt')
+    with open(test_paths_file, 'w') as f:
+        f.write('\n'.join(test_paths_with_emotions))
 
     return x_train, x_test, y_train, y_test
 
