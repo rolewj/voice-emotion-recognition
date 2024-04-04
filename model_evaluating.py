@@ -3,37 +3,52 @@ import pandas as pd
 import librosa
 import argparse
 import pickle
+from sklearn.metrics import classification_report, accuracy_score
 from tensorflow.keras.models import load_model
 import glob
 import os
+import re
 
-emotions_mapping = {
-    'ANG': 'Anger', 'DIS': 'Disgust', 'FEA': 'Fear',
-    'HAP': 'Happy', 'NEU': 'Neutral', 'SAD': 'Sad'
+emotions_mapping_crema_d = {
+    'ANG': 'Anger',
+    'DIS': 'Disgust',
+    'FEA': 'Fear',
+    'HAP': 'Happy',
+    'NEU': 'Neutral',
+    'SAD': 'Sad',
+}
+
+emotions_mapping_ravdess = {
+    "01": "Neutral",
+    "03": "Happy",
+    "04": "Sad",
+    "05": "Anger",
+    "06": "Fear",
+    "07": "Disgust"
 }
 
 emotion_labels = ['Anger', 'Disgust', 'Fear', 'Happy', 'Neutral', 'Sad']
 
 # Функция для загрузки и предобработки аудиофайлов из датасета
-def load_samples(data_folder, num_samples_per_emotion=10, random_state=42):
-    all_files = glob(os.path.join(data_folder, "*.wav"))
-    samples = {emotion: [] for emotion in emotions_mapping.values()}
+# def load_samples(data_folder, num_samples_per_emotion=10, random_state=42):
+#     all_files = glob(os.path.join(data_folder, "*.wav"))
+#     samples = {emotion: [] for emotion in emotions_mapping.values()}
     
-    np.random.seed(random_state)
-    np.random.shuffle(all_files)
+#     np.random.seed(random_state)
+#     np.random.shuffle(all_files)
     
-    for file_path in all_files:
-        file_name = os.path.basename(file_path)
-        parts = file_name.split('_')
-        emotion_short = parts[2] if len(parts) > 2 else None
-        emotion = emotions_mapping.get(emotion_short)
-        if emotion and len(samples[emotion]) < num_samples_per_emotion:
-            samples[emotion].append(file_path)
+#     for file_path in all_files:
+#         file_name = os.path.basename(file_path)
+#         parts = file_name.split('_')
+#         emotion_short = parts[2] if len(parts) > 2 else None
+#         emotion = emotions_mapping.get(emotion_short)
+#         if emotion and len(samples[emotion]) < num_samples_per_emotion:
+#             samples[emotion].append(file_path)
         
-        if all(len(files) == num_samples_per_emotion for files in samples.values()):
-            break
+#         if all(len(files) == num_samples_per_emotion for files in samples.values()):
+#             break
     
-    return samples
+#     return samples
 
 def zcr(data, frame_length=2048, hop_length=512):
     return np.squeeze(librosa.feature.zero_crossing_rate(data, frame_length=frame_length, hop_length=hop_length))
@@ -85,48 +100,13 @@ def predict_emotion_from_file(file_path, scaler2):
     print("Формат входных данных для модели:", model_input_features.shape)
     return model_input_features
 
-def predict_and_report(model, samples, output_path, emotion_labels, scaler2, encoder2, num_samples_per_emotion=10):
-    reports = []
-    emotion_counts = {emotion: 0 for emotion in emotion_labels}
-    
-    for emotion, files in samples.items():
-        for file_path in files[:num_samples_per_emotion]:
-            model_input_features = predict_emotion_from_file(file_path, scaler2)
-            predictions = model.predict(model_input_features)
-            predicted_emotion_index = np.argmax(predictions, axis=1)
-            # Преобразование индексов в one-hot векторы
-            num_classes = len(emotion_labels)
-            one_hot_predictions = np.zeros((predictions.shape[0], num_classes))
-            one_hot_predictions[np.arange(predictions.shape[0]), predicted_emotion_index] = 1
-            # Получение исходных меток классов
-            predicted_emotion_labels = encoder2.inverse_transform(one_hot_predictions)
-            predicted_emotion = predicted_emotion_labels[0][0]
-            emotion_counts[predicted_emotion] += 1
-
-            report = f"File: {file_path}\nPredicted Emotion: {predicted_emotion}\nProbabilities:\n"
-            class_probabilities  = predictions.flatten()  # Преобразуем предсказания для удобства отчета
-            for label, prob in zip(emotion_labels, class_probabilities):
-                report += f"{label}: {prob:.4f}\n"
-            report += "\n"
-            reports.append(report)
-    
-    # Затем записываем всё в файл отчёта
-    output_path_txt = os.path.join(output_path, 'model_evaluating_report.txt')
-    with open(output_path_txt, 'w') as report_file:
-        # Сначала записываем подсчёты эмоций
-        report_file.write("Emotion Counts:\n")
-        for emotion, count in emotion_counts.items():
-            report_file.write(f"{emotion}: {count}\n")
-        report_file.write("\nDetailed Predictions:\n\n")
-        
-        # После подсчётов записываем детализированные предсказания
-        for report in reports:
-            report_file.write(report)
-
-
 def predict_and_report_modified(model, path, output_path, emotion_labels, scaler2, encoder2):
     reports = []
+    true_labels = []
+    predicted_labels = []
     emotion_counts = {emotion: 0 for emotion in emotion_labels}
+    correct_predictions = 0
+    total_predictions = 0
     
     # Проверяем, является ли путь директорией
     if os.path.isdir(path):
@@ -147,27 +127,69 @@ def predict_and_report_modified(model, path, output_path, emotion_labels, scaler
         # Получение исходных меток классов
         predicted_emotion_labels = encoder2.inverse_transform(one_hot_predictions)
         predicted_emotion = predicted_emotion_labels[0][0]
+        
+        file_name = os.path.basename(file_path)
+        
+        if re.match(r'^\d{4}_\w{3}_\w{3}_\w{2}\.wav$', file_name):
+            # Файл из датасета CREMA-D
+            emotion_code = file_name.split('_')[2]
+            if emotion_code in emotions_mapping_crema_d:
+                true_emotion = emotions_mapping_crema_d[emotion_code]
+            else:
+                true_emotion = 'Unknown'
+        elif re.match(r'^\d{2}-\d{2}-\d{2}-\d{2}-\d{2}-\d{2}-\d{2}\.wav$', file_name):
+            # Файл из датасета RAVDESS
+            emotion_code = file_name.split('-')[2]
+            if emotion_code in emotions_mapping_ravdess:
+                true_emotion = emotions_mapping_ravdess[emotion_code]
+            else:
+                true_emotion = 'Unknown'
+        else:
+            # Если формат файла не соответствует ожидаемым шаблонам, считаем эмоцию неизвестной
+            true_emotion = 'Unknown'
+        
+        true_labels.append(true_emotion)
+        predicted_labels.append(predicted_emotion)
+        
+        if true_emotion == predicted_emotion:
+            correct_predictions += 1
+        total_predictions += 1
+        
         emotion_counts[predicted_emotion] += 1
 
-        report = f"File: {file_path}\nPredicted Emotion: {predicted_emotion}\nProbabilities:\n"
+        report = f"File path: {file_path}\nTrue Emotion: {true_emotion}\nPredicted Emotion: {predicted_emotion}\nProbabilities:\n"
         class_probabilities = predictions.flatten()  # Преобразуем предсказания для удобства отчета
         for label, prob in zip(emotion_labels, class_probabilities):
             report += f"{label}: {prob:.4f}\n"
         report += "\n"
         reports.append(report)
+    
+    total_files = len(true_labels)
+    recognized_emotions = [label for label in true_labels if label != "Unknown"]
+    unknown_emotions = [label for label in true_labels if label == "Unknown"]
+    correctly_predicted = sum(1 for true, pred in zip(true_labels, predicted_labels) if true == pred and true != "Unknown")
+
+    recognized_accuracy = accuracy_score(recognized_emotions, [pred for pred, true in zip(predicted_labels, true_labels) if true != "Unknown"])
+
+    clf_report = classification_report(recognized_emotions, [pred for pred, true in zip(predicted_labels, true_labels) if true != "Unknown"], target_names=emotion_labels, zero_division=1, digits=4)
+    
+    # Затем записываем всё в файл отчёта
+    output_path_txt = os.path.join(output_path, 'model_evaluating_report.txt')
+    with open(output_path_txt, 'w') as report_file:
+        report_file.write("General information:\n")
+        report_file.write(f"Total number of files: {total_files}\n")
+        report_file.write(f"Number of recognized emotions: {len(recognized_emotions)}\n")
+        report_file.write(f"Number of unknown emotions: {len(unknown_emotions)}\n")
+        report_file.write(f"Number of correctly predicted emotions: {correctly_predicted} out of {len(recognized_emotions)}\n")
+        report_file.write(f"Overall accuracy: {recognized_accuracy:.4%}\n\n")
         
-        # Затем записываем всё в файл отчёта
-        output_path_txt = os.path.join(output_path, 'model_evaluating_report.txt')
-        with open(output_path_txt, 'w') as report_file:
-            # Сначала записываем подсчёты эмоций
-            report_file.write("Emotion Counts:\n")
-            for emotion, count in emotion_counts.items():
-                report_file.write(f"{emotion}: {count}\n")
-            report_file.write("\nDetailed Predictions:\n\n")
-            
-            # После подсчётов записываем детализированные предсказания
-            for report in reports:
-                report_file.write(report)
+        report_file.write("Detailed Classification Report for the test set:\n")
+        report_file.write(clf_report)
+        report_file.write("\n\n")
+        
+        report_file.write("Classification results for emotion recognition on each file in the test set:\n")
+        for report in reports:
+            report_file.write(report)
 
 
 def load_pickle(pickle_path):
@@ -185,6 +207,7 @@ if __name__ == "__main__":
     parser.add_argument("--data_folder", type=str, required=True, help="Путь к папке с датасетом.")
     parser.add_argument("--model_path", type=str, required=True, help="Путь к обученной .h5 модели.")
     parser.add_argument("--pickle_path", type=str, required=True, help="Путь к .pickle файлам.")
+    parser.add_argument("--emotions", nargs='+', required=True, help="Список эмоций для оценки.")
     parser.add_argument("--output_folder", type=str, required=True, help="Путь к папке для сохранения результатов.")
     
     args = parser.parse_args()
@@ -201,6 +224,6 @@ if __name__ == "__main__":
     # Выполнение предсказаний и генерация отчета
     # predict_and_report(model, samples, args.output_folder, emotion_labels, scaler2, encoder2)
     
-    predict_and_report_modified(model, args.data_folder, args.output_folder, emotion_labels, scaler2, encoder2)
+    predict_and_report_modified(model, args.data_folder, args.output_folder, args.emotions, scaler2, encoder2)
     
     print(f"Оценка прошла успешно. Данные сохранены в папку '{args.output_folder}'")
