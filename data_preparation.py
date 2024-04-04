@@ -2,6 +2,7 @@ import librosa
 import numpy as np
 import pandas as pd
 import os
+import re
 import argparse
 import pickle
 from glob import glob
@@ -64,26 +65,27 @@ def crema_d_load_and_preprocess_data(audios_folder):
         emotion_level_list.append(emotion_level)
         sex_list.append(sex)
 
-    crema_df = pd.concat([
-        pd.DataFrame({'Path': path_list}),
-        pd.DataFrame({'Emotions': emotion_list}),
-        # pd.DataFrame({'Emotion levels': emotion_level_list}),
-        pd.DataFrame({'Sex': sex_list}),
-    ], axis=1)
+    # Создание DataFrame
+    crema_df = pd.DataFrame({
+        'Path': path_list,
+        'Emotions': emotion_list,
+    #   'Emotion levels': emotion_level_list,
+        'Sex': sex_list
+    })
     
-    # target_file = '1040_ITH_SAD_X.wav'
-    # file_exists = crema_df['Path'].str.contains(target_file).any()
-    # if file_exists:
-    #     index_to_modify = crema_df[crema_df['Path'].str.contains(target_file)].index[0]
-    #     crema_df.loc[index_to_modify, 'Emotion levels'] = 'Unspecified'
-    # else:
-    #     print(f"Файл {target_file} не найден в датасете.")
+    target_file = '1040_ITH_SAD_X.wav'
+    file_exists = crema_df['Path'].str.contains(target_file).any()
+    if file_exists:
+        index_to_modify = crema_df[crema_df['Path'].str.contains(target_file)].index[0]
+        crema_df.loc[index_to_modify, 'Emotion levels'] = 'Unspecified'
+    else:
+        print(f"Файл {target_file} не найден в датасете.")
     
     return crema_df
 
 def ravdess_load_and_preprocess_data(audios_folder):
     audios = glob(f"{audios_folder}/**/*.wav", recursive=True)
-    path_list, emotion_list, actor_list = [], [], []
+    path_list, emotion_list, sex_list = [], [], []
 
     for file in audios:
         path_list.append(file)
@@ -96,13 +98,13 @@ def ravdess_load_and_preprocess_data(audios_folder):
         sex = 'Female' if actor % 2 == 0 else 'Male'
 
         emotion_list.append(emotion)
-        actor_list.append(sex)
+        sex_list.append(sex)
 
     # Создание DataFrame
     ravdess_df = pd.DataFrame({
         'Path': path_list,
         'Emotions': emotion_list,
-        'Sex': actor_list
+        'Sex': sex_list
     })
 
     return ravdess_df
@@ -115,6 +117,7 @@ def load_and_preprocess_datasets(dataset_paths, emotions_list):
             df = crema_d_load_and_preprocess_data(dataset_path)
         elif "RAVDESS" in dataset_path:
             df = ravdess_load_and_preprocess_data(dataset_path)
+            df['Emotions'] = df['Emotions'].replace({'Angry': 'Anger', 'Fearful': 'Fear'})
         else:
             print(f"Неизвестный датасет: {dataset_path}")
             continue
@@ -194,70 +197,94 @@ def parallel_feature_extraction(df):
 
     return Features
 
-# def preprocess_features(Features):
+# def preprocess_features(Features, output_folder):
 #     Features = Features.fillna(0)
 
-#     grouped = Features.groupby('labels')
-    
-#     x_test_list = []
-#     y_test_list = []
-#     x_train_list = []
-#     y_train_list = []
+#     X = Features.iloc[:, :-2].values
+#     Y = Features['labels'].values
 
-#     for name, group in grouped:
-#         X_group = group.iloc[:, :-1].values
-#         Y_group = group['labels'].values.reshape(-1, 1)
+#     # Сохранение путей к файлам
+#     file_path_with_emotions = Features['file_path_with_emotion'].tolist()
 
-#         # Использование train_test_split для разделения каждой группы на тестовую и обучающую выборки
-#         X_temp_train, X_temp_test, Y_temp_train, Y_temp_test = train_test_split(X_group, Y_group, test_size=10, random_state=42, shuffle=True)
-        
-#         x_test_list.append(X_temp_test)
-#         y_test_list.append(Y_temp_test)
-#         x_train_list.append(X_temp_train)
-#         y_train_list.append(Y_temp_train)
-
-#     # Объединение данных из списков в один массив
-#     x_test = np.vstack(x_test_list)
-#     y_test = np.vstack(y_test_list)
-#     x_train = np.vstack(x_train_list)
-#     y_train = np.vstack(y_train_list)
-
-#     # Преобразование меток с OneHotEncoder
 #     encoder = OneHotEncoder()
-#     y_train = encoder.fit_transform(y_train).toarray()
-#     y_test = encoder.transform(y_test).toarray()
+#     Y = encoder.fit_transform(np.array(Y).reshape(-1, 1)).toarray()
+    
+#     encoder_file_path = os.path.join(output_folder, 'encoder.pickle')
+#     with open(encoder_file_path, 'wb') as f:
+#         pickle.dump(encoder, f)
+
+#     x_train, x_test, y_train, y_test, train_paths_with_emotions, test_paths_with_emotions = train_test_split(X, Y, file_path_with_emotions, random_state=0, shuffle=True)
 
 #     scaler = StandardScaler()
 #     x_train = scaler.fit_transform(x_train)
 #     x_test = scaler.transform(x_test)
 
+#     scaler_file_path = os.path.join(output_folder, 'scaler.pickle')
+#     with open(scaler_file_path, 'wb') as f:
+#         pickle.dump(scaler, f)
+
+#     print("Encoder и Scaler успешно загружены.")
+
 #     x_train = np.expand_dims(x_train, axis=2)
 #     x_test = np.expand_dims(x_test, axis=2)
+    
+#     train_paths_file = os.path.join(output_folder, 'train_paths_with_emotions.txt')
+#     with open(train_paths_file, 'w') as f:
+#         f.write('\n'.join(train_paths_with_emotions))
+    
+#     test_paths_file = os.path.join(output_folder, 'test_paths_with_emotions.txt')
+#     with open(test_paths_file, 'w') as f:
+#         f.write('\n'.join(test_paths_with_emotions))
 
 #     return x_train, x_test, y_train, y_test
 
-def preprocess_features(Features, output_folder):
+def preprocess_features_with_stratified_split(Features, output_folder, test_size_per_class):
     Features = Features.fillna(0)
-
+    
     X = Features.iloc[:, :-2].values
     Y = Features['labels'].values
-
+    
     # Сохранение путей к файлам
     file_path_with_emotions = Features['file_path_with_emotion'].tolist()
 
     encoder = OneHotEncoder()
-    Y = encoder.fit_transform(np.array(Y).reshape(-1, 1)).toarray()
-    
+    Y_encoded = encoder.fit_transform(np.array(Y).reshape(-1, 1)).toarray()
     encoder_file_path = os.path.join(output_folder, 'encoder.pickle')
     with open(encoder_file_path, 'wb') as f:
         pickle.dump(encoder, f)
 
-    x_train, x_test, y_train, y_test, train_paths_with_emotions, test_paths_with_emotions = train_test_split(X, Y, file_path_with_emotions, random_state=0, shuffle=True)
+    # Разделение данных на обучающую и тестовую выборки с фиксированным количеством записей для каждой эмоции и каждого датасета
+    X_train, X_test, Y_train, Y_test, train_paths, test_paths = [], [], [], [], [], []
+    for emotion in np.unique(Y):
+        for dataset_pattern in ['^\d{4}_\w{3}_\w{3}_\w{2}\.wav$', '^\d{2}-\d{2}-\d{2}-\d{2}-\d{2}-\d{2}-\d{2}\.wav$']:
+            emotion_indices = [i for i, path in enumerate(file_path_with_emotions) if Y[i] == emotion and re.match(dataset_pattern, os.path.basename(path.split(',')[0]))]
+            X_emotion = X[emotion_indices]
+            Y_emotion = Y_encoded[emotion_indices]
+            paths_emotion = [file_path_with_emotions[i] for i in emotion_indices]
+
+            if len(X_emotion) >= test_size_per_class:
+                test_indices = np.random.choice(len(X_emotion), test_size_per_class, replace=False)
+                train_indices = np.setdiff1d(np.arange(len(X_emotion)), test_indices)
+                X_train_emotion, X_test_emotion = X_emotion[train_indices], X_emotion[test_indices]
+                Y_train_emotion, Y_test_emotion = Y_emotion[train_indices], Y_emotion[test_indices]
+                train_paths_emotion = [paths_emotion[i] for i in train_indices]
+                test_paths_emotion = [paths_emotion[i] for i in test_indices]
+                X_train.append(X_train_emotion)
+                X_test.append(X_test_emotion)
+                Y_train.append(Y_train_emotion)
+                Y_test.append(Y_test_emotion)
+                train_paths.extend(train_paths_emotion)
+                test_paths.extend(test_paths_emotion)
+
+    x_train = np.concatenate(X_train)
+    x_test = np.concatenate(X_test)
+    y_train = np.concatenate(Y_train)
+    y_test = np.concatenate(Y_test)
 
     scaler = StandardScaler()
     x_train = scaler.fit_transform(x_train)
     x_test = scaler.transform(x_test)
-
+    
     scaler_file_path = os.path.join(output_folder, 'scaler.pickle')
     with open(scaler_file_path, 'wb') as f:
         pickle.dump(scaler, f)
@@ -266,14 +293,14 @@ def preprocess_features(Features, output_folder):
 
     x_train = np.expand_dims(x_train, axis=2)
     x_test = np.expand_dims(x_test, axis=2)
-    
+
     train_paths_file = os.path.join(output_folder, 'train_paths_with_emotions.txt')
     with open(train_paths_file, 'w') as f:
-        f.write('\n'.join(train_paths_with_emotions))
-    
+        f.write('\n'.join(train_paths))
+
     test_paths_file = os.path.join(output_folder, 'test_paths_with_emotions.txt')
     with open(test_paths_file, 'w') as f:
-        f.write('\n'.join(test_paths_with_emotions))
+        f.write('\n'.join(test_paths))
 
     return x_train, x_test, y_train, y_test
 
@@ -317,6 +344,7 @@ if __name__ == "__main__":
     df = load_and_preprocess_datasets(args.datasets, args.emotions)
     save_report(df, args.output_folder)
     Features = parallel_feature_extraction(df)
-    x_train, x_test, y_train, y_test = preprocess_features(Features, args.output_folder)
+    # x_train, x_test, y_train, y_test = preprocess_features(Features, args.output_folder)
+    x_train, x_test, y_train, y_test = preprocess_features_with_stratified_split(Features, args.output_folder, 10)
     save_data(x_train, x_test, y_train, y_test, args.output_folder)
     print(f"Предобработка данных завершена. Данные сохранены в папку '{args.output_folder}'")

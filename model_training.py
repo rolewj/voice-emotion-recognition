@@ -96,11 +96,22 @@ def train_and_evaluate_model(x_train, y_train, x_test, y_test, emotions, emotion
 
     classification_report_str = classification_report(y_test_labels, pred_test_labels, target_names=emotions, digits = 4, output_dict=False)
     
+    # Приведение меток эмоций к числовому формату
+    emotion_to_label = {emotion: i for i, emotion in enumerate(emotions)}
+    y_test_labels = [emotion_to_label[emotion] for emotion in test_file_emotions]
+
+    # Приведение порядка меток эмоций в соответствие с y_test
+    emotion_labels = [emotions[label] for label in np.unique(y_test_labels)]
+
+    # Проверка соответствия меток эмоций
+    if not np.array_equal(y_test_labels, [emotion_to_label[emotion] for emotion in test_file_emotions]):
+        print("Mismatch between y_test labels and test_file emotions.")  
+    
     # Запись распределения вероятностей по эмоциям для каждого файла
     output_path_txt = os.path.join(output_folder, 'test_predictions_report.txt')
     with open(output_path_txt, 'w') as file:
         # Создание строки с информацией о количестве эмоций, правильно угаданных эмоциях и точности
-        info_str = "General information about the test set:\n"
+        info_str = "General information:\n"
         info_str += f"Number of different emotions : {len(emotions)}\n"
         info_str += f"Number of correctly predicted emotions: {num_correct} out of {total_samples}\n"
         info_str += f"Overall accuracy: {accuracy * 100:.4f}%\n"
@@ -169,7 +180,7 @@ def train_and_evaluate_model(x_train, y_train, x_test, y_test, emotions, emotion
         pdf.savefig(fig)
         plt.close()
 
-    print(f"Отчет сохранен в '{report_path}'")
+    print(f"Отчеты model_training_report.pdf и test_predictions_report.txt сохранены в папку '{output_folder}'")
 
 def load_data(file_path):
     data = np.load(file_path)
