@@ -27,7 +27,23 @@ emotions_mapping_ravdess = {
     "07": "Disgust"
 }
 
-emotion_labels = ['Anger', 'Disgust', 'Fear', 'Happy', 'Neutral', 'Sad']
+emotions_mapping_savee = {
+    'a': 'Anger',
+    'd': 'Disgust',
+    'f': 'Fear',
+    'h': 'Happy',
+    'n': 'Neutral',
+    'sa': 'Sad',
+}
+
+emotions_mapping_tess = {
+    'angry': 'Anger',
+    'disgust': 'Disgust',
+    'fear': 'Fear',
+    'happy': 'Happy',
+    'neutral': 'Neutral',
+    'sad': 'Sad',
+}
 
 # Функция для загрузки и предобработки аудиофайлов из датасета
 # def load_samples(data_folder, num_samples_per_emotion=10, random_state=42):
@@ -144,6 +160,20 @@ def predict_and_report_modified(model, path, output_path, emotion_labels, scaler
                 true_emotion = emotions_mapping_ravdess[emotion_code]
             else:
                 true_emotion = 'Unknown'
+        elif re.match(r'^[a-z]{1,2}\d{2}\.wav$', file_name):
+            # Файл из датасета SAVEE
+            emotion_code = file_name[:2] if file_name[1].isalpha() else file_name[0]
+            if emotion_code in emotions_mapping_savee:
+                true_emotion = emotions_mapping_savee[emotion_code]
+            else:
+                true_emotion = 'Unknown'
+        elif re.match(r'^[A-Z]{3}_[a-z]+_[a-z]+\.wav$', file_name):
+            # Файл из датасета TESS
+            emotion_code = file_name.split('_')[-1].split('.')[0]
+            if emotion_code in emotions_mapping_tess:
+                true_emotion = emotions_mapping_tess[emotion_code]
+            else:
+                true_emotion = 'Unknown'
         else:
             # Если формат файла не соответствует ожидаемым шаблонам, считаем эмоцию неизвестной
             true_emotion = 'Unknown'
@@ -169,9 +199,12 @@ def predict_and_report_modified(model, path, output_path, emotion_labels, scaler
     unknown_emotions = [label for label in true_labels if label == "Unknown"]
     correctly_predicted = sum(1 for true, pred in zip(true_labels, predicted_labels) if true == pred and true != "Unknown")
 
-    recognized_accuracy = accuracy_score(recognized_emotions, [pred for pred, true in zip(predicted_labels, true_labels) if true != "Unknown"])
-
-    clf_report = classification_report(recognized_emotions, [pred for pred, true in zip(predicted_labels, true_labels) if true != "Unknown"], target_names=emotion_labels, zero_division=1, digits=4)
+    if recognized_emotions:
+        recognized_accuracy = accuracy_score(recognized_emotions, [pred for pred, true in zip(predicted_labels, true_labels) if true != "Unknown"])
+        clf_report = classification_report(recognized_emotions, [pred for pred, true in zip(predicted_labels, true_labels) if true != "Unknown"], target_names=emotion_labels, zero_division=1, digits=4)
+    else:
+        recognized_accuracy = 0.0
+        clf_report = "No recognized emotions found in the test set."
     
     # Затем записываем всё в файл отчёта
     output_path_txt = os.path.join(output_path, 'model_evaluating_report.txt')

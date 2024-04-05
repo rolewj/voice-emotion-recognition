@@ -35,6 +35,26 @@ emotions_mapping_ravdess = {
     "08": "Surprised"
 }
 
+emotions_mapping_savee = {
+    'a': 'Angry',
+    'd': 'Disgust',
+    'f': 'Fear',
+    'h': 'Happy',
+    'n': 'Neutral',
+    'sa': 'Sad',
+    'su': 'Surprise'
+}
+
+emotions_mapping_tess = {
+    'angry': 'Angry',
+    'disgust': 'Disgust',
+    'fear': 'Fear',
+    'happy': 'Happy',
+    'neutral': 'Neutral',
+    'sad': 'Sad',
+    'ps': 'Surprise'
+}
+
 emotion_level_mapping_crema_d = {
     'LO': 'Low',
     'MD': 'Medium',
@@ -81,6 +101,8 @@ def crema_d_load_and_preprocess_data(audios_folder):
     else:
         print(f"Файл {target_file} не найден в датасете.")
     
+    print(crema_df.Emotions.value_counts())
+    
     return crema_df
 
 def ravdess_load_and_preprocess_data(audios_folder):
@@ -106,8 +128,66 @@ def ravdess_load_and_preprocess_data(audios_folder):
         'Emotions': emotion_list,
         'Sex': sex_list
     })
-
+    
+    print(ravdess_df.Emotions.value_counts())
+    
     return ravdess_df
+
+def savee_load_and_preprocess_data(audios_folder):
+    audios = glob(f"{audios_folder}/**/*.wav", recursive=True)
+    path_list, emotion_list, sex_list = [], [], []
+
+    for file in audios:
+        path_list.append(file)
+        filename = os.path.basename(file)
+        parts = filename.split('.')
+        if len(parts) == 2 and len(parts[0]) >= 1:
+            if parts[0][:2] in ['sa', 'su']:
+                emotion = emotions_mapping_savee.get(parts[0][:2], 'Unknown')
+            else:
+                emotion = emotions_mapping_savee.get(parts[0][0], 'Unknown')
+        else:
+            emotion = 'Unknown'
+        sex = 'Male'
+
+        emotion_list.append(emotion)
+        sex_list.append(sex)
+
+    # Создание DataFrame
+    savee_df = pd.DataFrame({
+        'Path': path_list,
+        'Emotions': emotion_list,
+        'Sex': sex_list
+    })
+    
+    print(savee_df.Emotions.value_counts())
+    
+    return savee_df
+
+def tess_load_and_preprocess_data(audios_folder):
+    audios = glob(f"{audios_folder}/**/*.wav", recursive=True)
+    path_list, emotion_list, sex_list = [], [], []
+
+    for file in audios:
+        path_list.append(file)
+        filename = os.path.basename(file)
+        parts = filename.split('_')
+        emotion = emotions_mapping_tess.get(parts[-1].split('.')[0], 'Unknown')
+        sex = 'Female'
+
+        emotion_list.append(emotion)
+        sex_list.append(sex)
+
+    # Создание DataFrame
+    tess_df = pd.DataFrame({
+        'Path': path_list,
+        'Emotions': emotion_list,
+        'Sex': sex_list
+    })
+    
+    print(tess_df.Emotions.value_counts())
+    
+    return tess_df
 
 def load_and_preprocess_datasets(dataset_paths, emotions_list):
     combined_df = pd.DataFrame()
@@ -117,7 +197,13 @@ def load_and_preprocess_datasets(dataset_paths, emotions_list):
             df = crema_d_load_and_preprocess_data(dataset_path)
         elif "RAVDESS" in dataset_path:
             df = ravdess_load_and_preprocess_data(dataset_path)
-            df['Emotions'] = df['Emotions'].replace({'Angry': 'Anger', 'Fearful': 'Fear'})
+            df['Emotions'] = df['Emotions'].replace({'Angry': 'Anger', 'Fearful': 'Fear', 'Surprised': 'Surprise'})
+        elif "SAVEE" in dataset_path:
+            df = savee_load_and_preprocess_data(dataset_path)
+            df['Emotions'] = df['Emotions'].replace({'Angry': 'Anger'})
+        elif "TESS" in dataset_path:
+            df = tess_load_and_preprocess_data(dataset_path)
+            df['Emotions'] = df['Emotions'].replace({'Angry': 'Anger'})
         else:
             print(f"Неизвестный датасет: {dataset_path}")
             continue
@@ -125,7 +211,25 @@ def load_and_preprocess_datasets(dataset_paths, emotions_list):
         combined_df = pd.concat([combined_df, df], ignore_index=True)
     
     if emotions_list:
-        combined_df = combined_df[combined_df['Emotions'].isin(emotions_list)]
+        # Создаем словарь для сопоставления эмоций
+        emotion_mapping = {
+            'Anger': ['Anger', 'Angry'],
+            'Happy': ['Happy'],
+            'Sad': ['Sad'],
+            'Fear': ['Fear', 'Fearful'],
+            'Disgust': ['Disgust'],
+            'Surprise': ['Surprise', 'Surprised', 'Pleasant Surprise'],
+            'Neutral': ['Neutral'],
+            'Calm': ['Calm']
+        }
+        
+        # Создаем список выбранных эмоций с учетом различных вариантов названий
+        selected_emotions = []
+        for emotion in emotions_list:
+            selected_emotions.extend(emotion_mapping.get(emotion.capitalize(), []))
+        
+        combined_df = combined_df[combined_df['Emotions'].isin(selected_emotions)]
+    
     return combined_df
 
 def zcr(data, frame_length=2048, hop_length=512):
@@ -256,7 +360,7 @@ def preprocess_features_with_stratified_split(Features, output_folder, test_size
     # Разделение данных на обучающую и тестовую выборки с фиксированным количеством записей для каждой эмоции и каждого датасета
     X_train, X_test, Y_train, Y_test, train_paths, test_paths = [], [], [], [], [], []
     for emotion in np.unique(Y):
-        for dataset_pattern in ['^\d{4}_\w{3}_\w{3}_\w{2}\.wav$', '^\d{2}-\d{2}-\d{2}-\d{2}-\d{2}-\d{2}-\d{2}\.wav$']:
+        for dataset_pattern in ['^\d{4}_\w{3}_\w{3}_\w{2}\.wav$', '^\d{2}-\d{2}-\d{2}-\d{2}-\d{2}-\d{2}-\d{2}\.wav$', '^[a-z]{1,2}\d{2}\.wav$', '^\w{3}_\w+_\w+\.wav$']:
             emotion_indices = [i for i, path in enumerate(file_path_with_emotions) if Y[i] == emotion and re.match(dataset_pattern, os.path.basename(path.split(',')[0]))]
             X_emotion = X[emotion_indices]
             Y_emotion = Y_encoded[emotion_indices]
