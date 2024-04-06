@@ -1,0 +1,1341 @@
+General information:
+Number of different emotions : 6
+Number of correctly predicted emotions: 120 out of 120
+Overall accuracy: 100.0000%
+
+Detailed Classification Report for the test set:
+              precision    recall  f1-score   support
+
+       Anger     1.0000    1.0000    1.0000        20
+     Disgust     1.0000    1.0000    1.0000        20
+        Fear     1.0000    1.0000    1.0000        20
+       Happy     1.0000    1.0000    1.0000        20
+     Neutral     1.0000    1.0000    1.0000        20
+         Sad     1.0000    1.0000    1.0000        20
+
+    accuracy                         1.0000       120
+   macro avg     1.0000    1.0000    1.0000       120
+weighted avg     1.0000    1.0000    1.0000       120
+
+
+Classification results for emotion recognition on each file in the test set:
+File path: datasets\CREMA-D\AudioWAV\1080_TAI_ANG_XX.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9999
+Disgust: 0.0001
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\CREMA-D\AudioWAV\1058_MTI_ANG_XX.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9999
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0001
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\CREMA-D\AudioWAV\1015_IEO_ANG_MD.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9998
+Disgust: 0.0001
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\CREMA-D\AudioWAV\1059_ITS_ANG_XX.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9980
+Disgust: 0.0000
+Fear: 0.0018
+Happy: 0.0001
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\CREMA-D\AudioWAV\1083_ITH_ANG_XX.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9999
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\CREMA-D\AudioWAV\1060_DFA_ANG_XX.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9998
+Disgust: 0.0002
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\CREMA-D\AudioWAV\1082_ITS_ANG_XX.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9995
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0005
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\CREMA-D\AudioWAV\1006_DFA_ANG_XX.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9977
+Disgust: 0.0000
+Fear: 0.0023
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\CREMA-D\AudioWAV\1081_IEO_ANG_HI.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9998
+Disgust: 0.0000
+Fear: 0.0001
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\CREMA-D\AudioWAV\1049_ITS_ANG_XX.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9992
+Disgust: 0.0002
+Fear: 0.0000
+Happy: 0.0006
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\TESS\YAF_angry\YAF_read_angry.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9999
+Disgust: 0.0001
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\TESS\YAF_angry\YAF_should_angry.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 1.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\TESS\YAF_angry\YAF_mood_angry.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 1.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\TESS\YAF_angry\YAF_yearn_angry.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 1.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\TESS\YAF_angry\YAF_soup_angry.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9999
+Disgust: 0.0000
+Fear: 0.0001
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\TESS\YAF_angry\YAF_king_angry.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9995
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0001
+Neutral: 0.0004
+Sad: 0.0000
+
+File path: datasets\TESS\OAF_angry\OAF_calm_angry.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 1.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\TESS\OAF_angry\OAF_time_angry.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 1.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\TESS\OAF_angry\OAF_pick_angry.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 1.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\TESS\YAF_angry\YAF_life_angry.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 1.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\CREMA-D\AudioWAV\1044_TSI_DIS_XX.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9988
+Fear: 0.0007
+Happy: 0.0005
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\CREMA-D\AudioWAV\1008_IEO_DIS_MD.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0001
+Disgust: 0.9995
+Fear: 0.0001
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0003
+
+File path: datasets\CREMA-D\AudioWAV\1038_IWL_DIS_XX.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 1.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\CREMA-D\AudioWAV\1065_IOM_DIS_XX.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9939
+Fear: 0.0058
+Happy: 0.0002
+Neutral: 0.0001
+Sad: 0.0000
+
+File path: datasets\CREMA-D\AudioWAV\1057_TAI_DIS_XX.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9993
+Fear: 0.0000
+Happy: 0.0006
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\CREMA-D\AudioWAV\1071_WSI_DIS_XX.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9422
+Fear: 0.0364
+Happy: 0.0004
+Neutral: 0.0150
+Sad: 0.0060
+
+File path: datasets\CREMA-D\AudioWAV\1087_DFA_DIS_XX.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0023
+Disgust: 0.9974
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0002
+
+File path: datasets\CREMA-D\AudioWAV\1058_WSI_DIS_XX.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9958
+Fear: 0.0034
+Happy: 0.0000
+Neutral: 0.0002
+Sad: 0.0006
+
+File path: datasets\CREMA-D\AudioWAV\1059_ITH_DIS_XX.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 1.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\CREMA-D\AudioWAV\1047_ITS_DIS_XX.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0005
+Disgust: 0.9689
+Fear: 0.0000
+Happy: 0.0015
+Neutral: 0.0286
+Sad: 0.0005
+
+File path: datasets\TESS\YAF_disgust\YAF_walk_disgust.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 1.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\TESS\YAF_disgust\YAF_white_disgust.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 1.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\TESS\YAF_disgust\YAF_thought_disgust.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 1.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\TESS\YAF_disgust\YAF_hush_disgust.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0003
+Disgust: 0.9997
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\TESS\YAF_disgust\YAF_have_disgust.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9998
+Fear: 0.0002
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\TESS\YAF_disgust\YAF_nice_disgust.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 1.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\TESS\OAF_disgust\OAF_keep_disgust.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9995
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0005
+
+File path: datasets\TESS\OAF_disgust\OAF_tape_disgust.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 1.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\TESS\YAF_disgust\YAF_numb_disgust.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9997
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0003
+Sad: 0.0000
+
+File path: datasets\TESS\OAF_disgust\OAF_soup_disgust.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0004
+Disgust: 0.9996
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\CREMA-D\AudioWAV\1040_TIE_FEA_XX.wav
+True Emotion: Fear
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.9999
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\CREMA-D\AudioWAV\1086_TAI_FEA_XX.wav
+True Emotion: Fear
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0009
+Disgust: 0.0000
+Fear: 0.9989
+Happy: 0.0002
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\CREMA-D\AudioWAV\1039_TSI_FEA_XX.wav
+True Emotion: Fear
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0001
+Fear: 0.8936
+Happy: 0.0216
+Neutral: 0.0000
+Sad: 0.0846
+
+File path: datasets\CREMA-D\AudioWAV\1066_MTI_FEA_XX.wav
+True Emotion: Fear
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.9999
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0001
+
+File path: datasets\CREMA-D\AudioWAV\1063_TIE_FEA_XX.wav
+True Emotion: Fear
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0003
+Fear: 0.9875
+Happy: 0.0001
+Neutral: 0.0004
+Sad: 0.0117
+
+File path: datasets\CREMA-D\AudioWAV\1032_IEO_FEA_HI.wav
+True Emotion: Fear
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 1.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\CREMA-D\AudioWAV\1058_WSI_FEA_XX.wav
+True Emotion: Fear
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0007
+Disgust: 0.0000
+Fear: 0.9993
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\CREMA-D\AudioWAV\1055_IEO_FEA_LO.wav
+True Emotion: Fear
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0012
+Fear: 0.9956
+Happy: 0.0000
+Neutral: 0.0011
+Sad: 0.0022
+
+File path: datasets\CREMA-D\AudioWAV\1065_IWW_FEA_XX.wav
+True Emotion: Fear
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.9995
+Happy: 0.0000
+Neutral: 0.0004
+Sad: 0.0000
+
+File path: datasets\CREMA-D\AudioWAV\1030_IWW_FEA_XX.wav
+True Emotion: Fear
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0003
+Fear: 0.9994
+Happy: 0.0003
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\TESS\OAF_Fear\OAF_hurl_fear.wav
+True Emotion: Fear
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 1.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\TESS\OAF_Fear\OAF_deep_fear.wav
+True Emotion: Fear
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 1.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\TESS\YAF_fear\YAF_chat_fear.wav
+True Emotion: Fear
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 1.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\TESS\OAF_Fear\OAF_hate_fear.wav
+True Emotion: Fear
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 1.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\TESS\OAF_Fear\OAF_peg_fear.wav
+True Emotion: Fear
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 1.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\TESS\OAF_Fear\OAF_wheat_fear.wav
+True Emotion: Fear
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 1.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\TESS\OAF_Fear\OAF_gun_fear.wav
+True Emotion: Fear
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 1.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\TESS\YAF_fear\YAF_tell_fear.wav
+True Emotion: Fear
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 1.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\TESS\YAF_fear\YAF_mill_fear.wav
+True Emotion: Fear
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 1.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\TESS\OAF_Fear\OAF_goose_fear.wav
+True Emotion: Fear
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 1.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\CREMA-D\AudioWAV\1021_ITS_HAP_XX.wav
+True Emotion: Happy
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0010
+Fear: 0.0077
+Happy: 0.9840
+Neutral: 0.0024
+Sad: 0.0048
+
+File path: datasets\CREMA-D\AudioWAV\1086_IOM_HAP_XX.wav
+True Emotion: Happy
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0003
+Happy: 0.9996
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\CREMA-D\AudioWAV\1035_IWL_HAP_XX.wav
+True Emotion: Happy
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0003
+Fear: 0.0001
+Happy: 0.9990
+Neutral: 0.0005
+Sad: 0.0000
+
+File path: datasets\CREMA-D\AudioWAV\1022_IEO_HAP_MD.wav
+True Emotion: Happy
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0040
+Disgust: 0.4498
+Fear: 0.0563
+Happy: 0.4759
+Neutral: 0.0094
+Sad: 0.0047
+
+File path: datasets\CREMA-D\AudioWAV\1028_TIE_HAP_XX.wav
+True Emotion: Happy
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0002
+Happy: 0.9996
+Neutral: 0.0000
+Sad: 0.0002
+
+File path: datasets\CREMA-D\AudioWAV\1075_WSI_HAP_XX.wav
+True Emotion: Happy
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0001
+Fear: 0.0027
+Happy: 0.9922
+Neutral: 0.0043
+Sad: 0.0008
+
+File path: datasets\CREMA-D\AudioWAV\1015_ITS_HAP_XX.wav
+True Emotion: Happy
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0020
+Disgust: 0.0000
+Fear: 0.0001
+Happy: 0.9978
+Neutral: 0.0001
+Sad: 0.0000
+
+File path: datasets\CREMA-D\AudioWAV\1051_TSI_HAP_XX.wav
+True Emotion: Happy
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0002
+Fear: 0.0000
+Happy: 0.9998
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\CREMA-D\AudioWAV\1042_DFA_HAP_XX.wav
+True Emotion: Happy
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0001
+Fear: 0.0298
+Happy: 0.9701
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\CREMA-D\AudioWAV\1015_WSI_HAP_XX.wav
+True Emotion: Happy
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0151
+Happy: 0.9800
+Neutral: 0.0048
+Sad: 0.0000
+
+File path: datasets\TESS\YAF_happy\YAF_laud_happy.wav
+True Emotion: Happy
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 1.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\TESS\OAF_happy\OAF_pearl_happy.wav
+True Emotion: Happy
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 1.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\TESS\YAF_happy\YAF_name_happy.wav
+True Emotion: Happy
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 1.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\TESS\YAF_happy\YAF_deep_happy.wav
+True Emotion: Happy
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.3934
+Happy: 0.6065
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\TESS\OAF_happy\OAF_lease_happy.wav
+True Emotion: Happy
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.9976
+Neutral: 0.0022
+Sad: 0.0002
+
+File path: datasets\TESS\OAF_happy\OAF_mode_happy.wav
+True Emotion: Happy
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 1.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\TESS\YAF_happy\YAF_jail_happy.wav
+True Emotion: Happy
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0048
+Happy: 0.9952
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\TESS\OAF_happy\OAF_loaf_happy.wav
+True Emotion: Happy
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 1.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\TESS\YAF_happy\YAF_bought_happy.wav
+True Emotion: Happy
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 1.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\TESS\OAF_happy\OAF_reach_happy.wav
+True Emotion: Happy
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 1.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\CREMA-D\AudioWAV\1085_IOM_NEU_XX.wav
+True Emotion: Neutral
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0004
+Happy: 0.0004
+Neutral: 0.9992
+Sad: 0.0000
+
+File path: datasets\CREMA-D\AudioWAV\1061_DFA_NEU_XX.wav
+True Emotion: Neutral
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0001
+Fear: 0.0002
+Happy: 0.0014
+Neutral: 0.9965
+Sad: 0.0018
+
+File path: datasets\CREMA-D\AudioWAV\1017_ITS_NEU_XX.wav
+True Emotion: Neutral
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0006
+Fear: 0.0000
+Happy: 0.0004
+Neutral: 0.9985
+Sad: 0.0004
+
+File path: datasets\CREMA-D\AudioWAV\1081_TIE_NEU_XX.wav
+True Emotion: Neutral
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0001
+Happy: 0.0005
+Neutral: 0.9993
+Sad: 0.0001
+
+File path: datasets\CREMA-D\AudioWAV\1040_ITH_NEU_XX.wav
+True Emotion: Neutral
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0001
+Disgust: 0.0001
+Fear: 0.0002
+Happy: 0.0000
+Neutral: 0.9957
+Sad: 0.0038
+
+File path: datasets\CREMA-D\AudioWAV\1017_DFA_NEU_XX.wav
+True Emotion: Neutral
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0001
+Disgust: 0.0036
+Fear: 0.0000
+Happy: 0.0005
+Neutral: 0.9957
+Sad: 0.0001
+
+File path: datasets\CREMA-D\AudioWAV\1032_IOM_NEU_XX.wav
+True Emotion: Neutral
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.9624
+Sad: 0.0376
+
+File path: datasets\CREMA-D\AudioWAV\1042_MTI_NEU_XX.wav
+True Emotion: Neutral
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0001
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.9999
+Sad: 0.0000
+
+File path: datasets\CREMA-D\AudioWAV\1051_TSI_NEU_XX.wav
+True Emotion: Neutral
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0004
+Fear: 0.0163
+Happy: 0.0001
+Neutral: 0.9825
+Sad: 0.0006
+
+File path: datasets\CREMA-D\AudioWAV\1049_IWL_NEU_XX.wav
+True Emotion: Neutral
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0006
+Fear: 0.0001
+Happy: 0.0000
+Neutral: 0.9845
+Sad: 0.0147
+
+File path: datasets\TESS\YAF_neutral\YAF_rush_neutral.wav
+True Emotion: Neutral
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 1.0000
+Sad: 0.0000
+
+File path: datasets\TESS\OAF_neutral\OAF_germ_neutral.wav
+True Emotion: Neutral
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 1.0000
+Sad: 0.0000
+
+File path: datasets\TESS\OAF_neutral\OAF_pool_neutral.wav
+True Emotion: Neutral
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0002
+Fear: 0.0001
+Happy: 0.0000
+Neutral: 0.9994
+Sad: 0.0002
+
+File path: datasets\TESS\YAF_neutral\YAF_rough_neutral.wav
+True Emotion: Neutral
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 1.0000
+Sad: 0.0000
+
+File path: datasets\TESS\OAF_neutral\OAF_match_neutral.wav
+True Emotion: Neutral
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 1.0000
+Sad: 0.0000
+
+File path: datasets\TESS\OAF_neutral\OAF_phone_neutral.wav
+True Emotion: Neutral
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0001
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.9999
+Sad: 0.0000
+
+File path: datasets\TESS\OAF_neutral\OAF_lot_neutral.wav
+True Emotion: Neutral
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 1.0000
+Sad: 0.0000
+
+File path: datasets\TESS\YAF_neutral\YAF_goal_neutral.wav
+True Emotion: Neutral
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0004
+Disgust: 0.0002
+Fear: 0.0003
+Happy: 0.0000
+Neutral: 0.9991
+Sad: 0.0000
+
+File path: datasets\TESS\YAF_neutral\YAF_vine_neutral.wav
+True Emotion: Neutral
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 1.0000
+Sad: 0.0000
+
+File path: datasets\TESS\YAF_neutral\YAF_keep_neutral.wav
+True Emotion: Neutral
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 1.0000
+Sad: 0.0000
+
+File path: datasets\CREMA-D\AudioWAV\1090_ITH_SAD_XX.wav
+True Emotion: Sad
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.2455
+Fear: 0.0008
+Happy: 0.0024
+Neutral: 0.0000
+Sad: 0.7513
+
+File path: datasets\CREMA-D\AudioWAV\1053_IWL_SAD_XX.wav
+True Emotion: Sad
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0007
+Sad: 0.9993
+
+File path: datasets\CREMA-D\AudioWAV\1047_IEO_SAD_LO.wav
+True Emotion: Sad
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0003
+Fear: 0.0606
+Happy: 0.0002
+Neutral: 0.0016
+Sad: 0.9373
+
+File path: datasets\CREMA-D\AudioWAV\1072_ITS_SAD_XX.wav
+True Emotion: Sad
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0001
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.9999
+
+File path: datasets\CREMA-D\AudioWAV\1075_IEO_SAD_MD.wav
+True Emotion: Sad
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0158
+Fear: 0.0453
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.9389
+
+File path: datasets\CREMA-D\AudioWAV\1066_MTI_SAD_XX.wav
+True Emotion: Sad
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0009
+Fear: 0.0002
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.9989
+
+File path: datasets\CREMA-D\AudioWAV\1068_TSI_SAD_XX.wav
+True Emotion: Sad
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0002
+Fear: 0.0001
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.9997
+
+File path: datasets\CREMA-D\AudioWAV\1005_IWL_SAD_XX.wav
+True Emotion: Sad
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0013
+Sad: 0.9987
+
+File path: datasets\CREMA-D\AudioWAV\1025_IEO_SAD_MD.wav
+True Emotion: Sad
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0001
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.9999
+
+File path: datasets\CREMA-D\AudioWAV\1020_ITH_SAD_XX.wav
+True Emotion: Sad
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0003
+Fear: 0.0412
+Happy: 0.0000
+Neutral: 0.0014
+Sad: 0.9570
+
+File path: datasets\TESS\YAF_sad\YAF_gin_sad.wav
+True Emotion: Sad
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0001
+Sad: 0.9999
+
+File path: datasets\TESS\YAF_sad\YAF_half_sad.wav
+True Emotion: Sad
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 1.0000
+
+File path: datasets\TESS\OAF_Sad\OAF_life_sad.wav
+True Emotion: Sad
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 1.0000
+
+File path: datasets\TESS\YAF_sad\YAF_ton_sad.wav
+True Emotion: Sad
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 1.0000
+
+File path: datasets\TESS\YAF_sad\YAF_sub_sad.wav
+True Emotion: Sad
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 1.0000
+
+File path: datasets\TESS\YAF_sad\YAF_bath_sad.wav
+True Emotion: Sad
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 1.0000
+
+File path: datasets\TESS\YAF_sad\YAF_ditch_sad.wav
+True Emotion: Sad
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 1.0000
+
+File path: datasets\TESS\YAF_sad\YAF_jail_sad.wav
+True Emotion: Sad
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 1.0000
+
+File path: datasets\TESS\OAF_Sad\OAF_sour_sad.wav
+True Emotion: Sad
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0008
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.9992
+
+File path: datasets\TESS\YAF_sad\YAF_sour_sad.wav
+True Emotion: Sad
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 1.0000
+

@@ -1,0 +1,5303 @@
+General information:
+Total number of files: 480
+Number of recognized emotions: 420
+Number of unknown emotions: 60
+Number of correctly predicted emotions: 91 out of 420
+Overall accuracy: 21.6667%
+
+Detailed Classification Report for the test set:
+              precision    recall  f1-score   support
+
+       Anger     0.2195    0.6000    0.3214        60
+     Disgust     0.1793    0.4333    0.2537        60
+        Fear     0.1667    0.0500    0.0769        60
+       Happy     0.2308    0.1000    0.1395        60
+     Neutral     0.3793    0.0917    0.1477       120
+         Sad     0.2368    0.1500    0.1837        60
+
+    accuracy                         0.2167       420
+   macro avg     0.2354    0.2375    0.1871       420
+weighted avg     0.2560    0.2167    0.1815       420
+
+
+Classification results for emotion recognition on each file in the test set:
+File path: datasets\SAVEE\DC\a01.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.8516
+Disgust: 0.0032
+Fear: 0.1129
+Happy: 0.0319
+Neutral: 0.0002
+Sad: 0.0002
+
+File path: datasets\SAVEE\DC\a02.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9998
+Disgust: 0.0002
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\a03.wav
+True Emotion: Anger
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0012
+Disgust: 0.0000
+Fear: 0.2340
+Happy: 0.7648
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\a04.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9948
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0051
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\a05.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9998
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0002
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\a06.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9950
+Disgust: 0.0049
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\a07.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9844
+Disgust: 0.0000
+Fear: 0.0133
+Happy: 0.0022
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\a08.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9074
+Disgust: 0.0866
+Fear: 0.0000
+Happy: 0.0060
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\a09.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9046
+Disgust: 0.0914
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0004
+Sad: 0.0036
+
+File path: datasets\SAVEE\DC\a10.wav
+True Emotion: Anger
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0470
+Disgust: 0.9480
+Fear: 0.0000
+Happy: 0.0033
+Neutral: 0.0001
+Sad: 0.0015
+
+File path: datasets\SAVEE\DC\a11.wav
+True Emotion: Anger
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9999
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\a12.wav
+True Emotion: Anger
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.2840
+Disgust: 0.0094
+Fear: 0.0016
+Happy: 0.0018
+Neutral: 0.7030
+Sad: 0.0001
+
+File path: datasets\SAVEE\DC\a13.wav
+True Emotion: Anger
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.3113
+Disgust: 0.6845
+Fear: 0.0007
+Happy: 0.0005
+Neutral: 0.0000
+Sad: 0.0031
+
+File path: datasets\SAVEE\DC\a14.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.8908
+Disgust: 0.0829
+Fear: 0.0043
+Happy: 0.0218
+Neutral: 0.0000
+Sad: 0.0001
+
+File path: datasets\SAVEE\DC\a15.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.7669
+Disgust: 0.2304
+Fear: 0.0000
+Happy: 0.0001
+Neutral: 0.0024
+Sad: 0.0001
+
+File path: datasets\SAVEE\DC\d01.wav
+True Emotion: Disgust
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0005
+Disgust: 0.0188
+Fear: 0.0000
+Happy: 0.7115
+Neutral: 0.0787
+Sad: 0.1906
+
+File path: datasets\SAVEE\DC\d02.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0092
+Disgust: 0.9907
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\d03.wav
+True Emotion: Disgust
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0064
+Disgust: 0.1973
+Fear: 0.0256
+Happy: 0.1314
+Neutral: 0.6386
+Sad: 0.0007
+
+File path: datasets\SAVEE\DC\d04.wav
+True Emotion: Disgust
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.2217
+Disgust: 0.0424
+Fear: 0.0007
+Happy: 0.0456
+Neutral: 0.6891
+Sad: 0.0005
+
+File path: datasets\SAVEE\DC\d05.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0012
+Disgust: 0.9981
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0001
+Sad: 0.0007
+
+File path: datasets\SAVEE\DC\d06.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.4056
+Disgust: 0.5928
+Fear: 0.0000
+Happy: 0.0009
+Neutral: 0.0007
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\d07.wav
+True Emotion: Disgust
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0009
+Disgust: 0.0002
+Fear: 0.0065
+Happy: 0.0042
+Neutral: 0.9883
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\d08.wav
+True Emotion: Disgust
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0725
+Fear: 0.0000
+Happy: 0.7394
+Neutral: 0.1574
+Sad: 0.0307
+
+File path: datasets\SAVEE\DC\d09.wav
+True Emotion: Disgust
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.5755
+Disgust: 0.2764
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0002
+Sad: 0.1480
+
+File path: datasets\SAVEE\DC\d10.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.3732
+Disgust: 0.6177
+Fear: 0.0091
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\d11.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.1333
+Disgust: 0.8658
+Fear: 0.0000
+Happy: 0.0002
+Neutral: 0.0004
+Sad: 0.0003
+
+File path: datasets\SAVEE\DC\d12.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0234
+Disgust: 0.9751
+Fear: 0.0000
+Happy: 0.0009
+Neutral: 0.0007
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\d13.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.1320
+Disgust: 0.8334
+Fear: 0.0000
+Happy: 0.0204
+Neutral: 0.0033
+Sad: 0.0108
+
+File path: datasets\SAVEE\DC\d14.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0331
+Disgust: 0.9602
+Fear: 0.0000
+Happy: 0.0047
+Neutral: 0.0000
+Sad: 0.0019
+
+File path: datasets\SAVEE\DC\d15.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0531
+Disgust: 0.9469
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0001
+
+File path: datasets\SAVEE\DC\f01.wav
+True Emotion: Fear
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9962
+Disgust: 0.0000
+Fear: 0.0002
+Happy: 0.0036
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\f02.wav
+True Emotion: Fear
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.1934
+Disgust: 0.7734
+Fear: 0.0014
+Happy: 0.0290
+Neutral: 0.0025
+Sad: 0.0003
+
+File path: datasets\SAVEE\DC\f03.wav
+True Emotion: Fear
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.7628
+Disgust: 0.2314
+Fear: 0.0019
+Happy: 0.0038
+Neutral: 0.0000
+Sad: 0.0001
+
+File path: datasets\SAVEE\DC\f04.wav
+True Emotion: Fear
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9827
+Disgust: 0.0018
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0155
+
+File path: datasets\SAVEE\DC\f05.wav
+True Emotion: Fear
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9998
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0002
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\f06.wav
+True Emotion: Fear
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.1731
+Disgust: 0.8267
+Fear: 0.0001
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0001
+
+File path: datasets\SAVEE\DC\f07.wav
+True Emotion: Fear
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0398
+Disgust: 0.9081
+Fear: 0.0503
+Happy: 0.0003
+Neutral: 0.0001
+Sad: 0.0014
+
+File path: datasets\SAVEE\DC\f08.wav
+True Emotion: Fear
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.2763
+Disgust: 0.6117
+Fear: 0.0011
+Happy: 0.0082
+Neutral: 0.0745
+Sad: 0.0282
+
+File path: datasets\SAVEE\DC\f09.wav
+True Emotion: Fear
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.6773
+Disgust: 0.0211
+Fear: 0.0907
+Happy: 0.1910
+Neutral: 0.0041
+Sad: 0.0159
+
+File path: datasets\SAVEE\DC\f10.wav
+True Emotion: Fear
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0001
+Disgust: 0.0000
+Fear: 0.9996
+Happy: 0.0003
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\f11.wav
+True Emotion: Fear
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9875
+Disgust: 0.0118
+Fear: 0.0001
+Happy: 0.0005
+Neutral: 0.0001
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\f12.wav
+True Emotion: Fear
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.6701
+Disgust: 0.3297
+Fear: 0.0001
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\f13.wav
+True Emotion: Fear
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.3707
+Disgust: 0.0002
+Fear: 0.0000
+Happy: 0.6282
+Neutral: 0.0008
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\f14.wav
+True Emotion: Fear
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.8629
+Disgust: 0.0002
+Fear: 0.1365
+Happy: 0.0004
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\f15.wav
+True Emotion: Fear
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.4797
+Disgust: 0.0135
+Fear: 0.0001
+Happy: 0.0174
+Neutral: 0.0025
+Sad: 0.4868
+
+File path: datasets\SAVEE\DC\h01.wav
+True Emotion: Happy
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9986
+Disgust: 0.0001
+Fear: 0.0000
+Happy: 0.0013
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\h02.wav
+True Emotion: Happy
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9917
+Disgust: 0.0082
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0001
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\h03.wav
+True Emotion: Happy
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.7066
+Disgust: 0.0000
+Fear: 0.1898
+Happy: 0.1036
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\h04.wav
+True Emotion: Happy
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9969
+Disgust: 0.0031
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\h05.wav
+True Emotion: Happy
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.5375
+Disgust: 0.4596
+Fear: 0.0029
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\h06.wav
+True Emotion: Happy
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9911
+Disgust: 0.0067
+Fear: 0.0000
+Happy: 0.0006
+Neutral: 0.0000
+Sad: 0.0016
+
+File path: datasets\SAVEE\DC\h07.wav
+True Emotion: Happy
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.5164
+Disgust: 0.0006
+Fear: 0.0002
+Happy: 0.0005
+Neutral: 0.0000
+Sad: 0.4823
+
+File path: datasets\SAVEE\DC\h08.wav
+True Emotion: Happy
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9962
+Disgust: 0.0000
+Fear: 0.0038
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\h09.wav
+True Emotion: Happy
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9795
+Disgust: 0.0182
+Fear: 0.0018
+Happy: 0.0001
+Neutral: 0.0000
+Sad: 0.0003
+
+File path: datasets\SAVEE\DC\h10.wav
+True Emotion: Happy
+Predicted Emotion: Anger
+Probabilities:
+Anger: 1.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\h11.wav
+True Emotion: Happy
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0066
+Disgust: 0.9782
+Fear: 0.0020
+Happy: 0.0108
+Neutral: 0.0000
+Sad: 0.0023
+
+File path: datasets\SAVEE\DC\h12.wav
+True Emotion: Happy
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.3810
+Disgust: 0.5996
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0193
+
+File path: datasets\SAVEE\DC\h13.wav
+True Emotion: Happy
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0855
+Disgust: 0.0000
+Fear: 0.0057
+Happy: 0.9083
+Neutral: 0.0005
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\h14.wav
+True Emotion: Happy
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0013
+Disgust: 0.0028
+Fear: 0.0000
+Happy: 0.9957
+Neutral: 0.0000
+Sad: 0.0002
+
+File path: datasets\SAVEE\DC\h15.wav
+True Emotion: Happy
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.1070
+Disgust: 0.8923
+Fear: 0.0000
+Happy: 0.0007
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\n01.wav
+True Emotion: Neutral
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.1904
+Disgust: 0.0034
+Fear: 0.0010
+Happy: 0.0002
+Neutral: 0.0001
+Sad: 0.8049
+
+File path: datasets\SAVEE\DC\n02.wav
+True Emotion: Neutral
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.7372
+Disgust: 0.2628
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\n03.wav
+True Emotion: Neutral
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0000
+Disgust: 0.1881
+Fear: 0.0028
+Happy: 0.0000
+Neutral: 0.7786
+Sad: 0.0305
+
+File path: datasets\SAVEE\DC\n04.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0005
+Disgust: 0.9931
+Fear: 0.0001
+Happy: 0.0001
+Neutral: 0.0001
+Sad: 0.0062
+
+File path: datasets\SAVEE\DC\n05.wav
+True Emotion: Neutral
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9821
+Disgust: 0.0043
+Fear: 0.0000
+Happy: 0.0002
+Neutral: 0.0130
+Sad: 0.0004
+
+File path: datasets\SAVEE\DC\n06.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0033
+Disgust: 0.9967
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\n07.wav
+True Emotion: Neutral
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.1362
+Disgust: 0.0026
+Fear: 0.0000
+Happy: 0.0017
+Neutral: 0.8585
+Sad: 0.0010
+
+File path: datasets\SAVEE\DC\n08.wav
+True Emotion: Neutral
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.8305
+Disgust: 0.0207
+Fear: 0.0006
+Happy: 0.0832
+Neutral: 0.0649
+Sad: 0.0001
+
+File path: datasets\SAVEE\DC\n09.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0283
+Disgust: 0.9245
+Fear: 0.0001
+Happy: 0.0462
+Neutral: 0.0000
+Sad: 0.0009
+
+File path: datasets\SAVEE\DC\n10.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0056
+Disgust: 0.9498
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0446
+
+File path: datasets\SAVEE\DC\n11.wav
+True Emotion: Neutral
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0658
+Disgust: 0.1992
+Fear: 0.0095
+Happy: 0.0005
+Neutral: 0.0504
+Sad: 0.6745
+
+File path: datasets\SAVEE\DC\n12.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0148
+Disgust: 0.9843
+Fear: 0.0000
+Happy: 0.0007
+Neutral: 0.0000
+Sad: 0.0002
+
+File path: datasets\SAVEE\DC\n13.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.1116
+Disgust: 0.8875
+Fear: 0.0000
+Happy: 0.0008
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\n14.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0015
+Disgust: 0.9985
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\n15.wav
+True Emotion: Neutral
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.2640
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0016
+Sad: 0.7344
+
+File path: datasets\SAVEE\DC\n16.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0763
+Disgust: 0.8976
+Fear: 0.0000
+Happy: 0.0001
+Neutral: 0.0174
+Sad: 0.0086
+
+File path: datasets\SAVEE\DC\n17.wav
+True Emotion: Neutral
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0886
+Disgust: 0.2496
+Fear: 0.0000
+Happy: 0.0359
+Neutral: 0.0144
+Sad: 0.6115
+
+File path: datasets\SAVEE\DC\n18.wav
+True Emotion: Neutral
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0010
+Disgust: 0.0020
+Fear: 0.0552
+Happy: 0.9227
+Neutral: 0.0003
+Sad: 0.0187
+
+File path: datasets\SAVEE\DC\n19.wav
+True Emotion: Neutral
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.8385
+Disgust: 0.0062
+Fear: 0.0014
+Happy: 0.0007
+Neutral: 0.1533
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\n20.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0457
+Disgust: 0.8224
+Fear: 0.0000
+Happy: 0.0330
+Neutral: 0.0988
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\n21.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9527
+Fear: 0.0000
+Happy: 0.0001
+Neutral: 0.0423
+Sad: 0.0049
+
+File path: datasets\SAVEE\DC\n22.wav
+True Emotion: Neutral
+Predicted Emotion: Anger
+Probabilities:
+Anger: 1.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\n23.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0015
+Disgust: 0.9947
+Fear: 0.0001
+Happy: 0.0037
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\n24.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0064
+Disgust: 0.5966
+Fear: 0.0004
+Happy: 0.0005
+Neutral: 0.1144
+Sad: 0.2818
+
+File path: datasets\SAVEE\DC\n25.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0016
+Disgust: 0.9949
+Fear: 0.0001
+Happy: 0.0000
+Neutral: 0.0001
+Sad: 0.0033
+
+File path: datasets\SAVEE\DC\n26.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9917
+Fear: 0.0000
+Happy: 0.0024
+Neutral: 0.0000
+Sad: 0.0059
+
+File path: datasets\SAVEE\DC\n27.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0130
+Disgust: 0.8470
+Fear: 0.0000
+Happy: 0.0002
+Neutral: 0.1397
+Sad: 0.0001
+
+File path: datasets\SAVEE\DC\n28.wav
+True Emotion: Neutral
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9952
+Disgust: 0.0044
+Fear: 0.0001
+Happy: 0.0000
+Neutral: 0.0003
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\n29.wav
+True Emotion: Neutral
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0956
+Disgust: 0.0401
+Fear: 0.0070
+Happy: 0.0110
+Neutral: 0.0043
+Sad: 0.8421
+
+File path: datasets\SAVEE\DC\n30.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0017
+Disgust: 0.9982
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0001
+
+File path: datasets\SAVEE\DC\sa01.wav
+True Emotion: Sad
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0199
+Disgust: 0.9426
+Fear: 0.0014
+Happy: 0.0022
+Neutral: 0.0001
+Sad: 0.0339
+
+File path: datasets\SAVEE\DC\sa02.wav
+True Emotion: Sad
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.8290
+Disgust: 0.1168
+Fear: 0.0003
+Happy: 0.0537
+Neutral: 0.0000
+Sad: 0.0001
+
+File path: datasets\SAVEE\DC\sa03.wav
+True Emotion: Sad
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.1237
+Happy: 0.3223
+Neutral: 0.4770
+Sad: 0.0770
+
+File path: datasets\SAVEE\DC\sa04.wav
+True Emotion: Sad
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9991
+Fear: 0.0003
+Happy: 0.0000
+Neutral: 0.0005
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\sa05.wav
+True Emotion: Sad
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.8628
+Disgust: 0.1368
+Fear: 0.0000
+Happy: 0.0001
+Neutral: 0.0003
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\sa06.wav
+True Emotion: Sad
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9858
+Fear: 0.0002
+Happy: 0.0000
+Neutral: 0.0122
+Sad: 0.0017
+
+File path: datasets\SAVEE\DC\sa07.wav
+True Emotion: Sad
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0485
+Disgust: 0.6123
+Fear: 0.0718
+Happy: 0.0003
+Neutral: 0.2322
+Sad: 0.0349
+
+File path: datasets\SAVEE\DC\sa08.wav
+True Emotion: Sad
+Predicted Emotion: Anger
+Probabilities:
+Anger: 1.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\sa09.wav
+True Emotion: Sad
+Predicted Emotion: Anger
+Probabilities:
+Anger: 1.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\sa10.wav
+True Emotion: Sad
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.7154
+Disgust: 0.2089
+Fear: 0.0013
+Happy: 0.0006
+Neutral: 0.0621
+Sad: 0.0117
+
+File path: datasets\SAVEE\DC\sa11.wav
+True Emotion: Sad
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.1575
+Fear: 0.0086
+Happy: 0.0003
+Neutral: 0.0213
+Sad: 0.8123
+
+File path: datasets\SAVEE\DC\sa12.wav
+True Emotion: Sad
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.2573
+Disgust: 0.7106
+Fear: 0.0000
+Happy: 0.0008
+Neutral: 0.0244
+Sad: 0.0070
+
+File path: datasets\SAVEE\DC\sa13.wav
+True Emotion: Sad
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.4948
+Disgust: 0.5050
+Fear: 0.0002
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\sa14.wav
+True Emotion: Sad
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0005
+Disgust: 0.9994
+Fear: 0.0000
+Happy: 0.0001
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\sa15.wav
+True Emotion: Sad
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0033
+Disgust: 0.9103
+Fear: 0.0014
+Happy: 0.0001
+Neutral: 0.0000
+Sad: 0.0849
+
+File path: datasets\SAVEE\DC\su01.wav
+True Emotion: Unknown
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9802
+Disgust: 0.0003
+Fear: 0.0026
+Happy: 0.0169
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\su02.wav
+True Emotion: Unknown
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9978
+Disgust: 0.0020
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0002
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\su03.wav
+True Emotion: Unknown
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0358
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.9641
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\su04.wav
+True Emotion: Unknown
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.8317
+Disgust: 0.1452
+Fear: 0.0006
+Happy: 0.0219
+Neutral: 0.0005
+Sad: 0.0002
+
+File path: datasets\SAVEE\DC\su05.wav
+True Emotion: Unknown
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0365
+Disgust: 0.8837
+Fear: 0.0119
+Happy: 0.0522
+Neutral: 0.0034
+Sad: 0.0122
+
+File path: datasets\SAVEE\DC\su06.wav
+True Emotion: Unknown
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0011
+Disgust: 0.0005
+Fear: 0.0033
+Happy: 0.0791
+Neutral: 0.9154
+Sad: 0.0005
+
+File path: datasets\SAVEE\DC\su07.wav
+True Emotion: Unknown
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9973
+Disgust: 0.0019
+Fear: 0.0000
+Happy: 0.0008
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\su08.wav
+True Emotion: Unknown
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0132
+Disgust: 0.9367
+Fear: 0.0001
+Happy: 0.0012
+Neutral: 0.0002
+Sad: 0.0485
+
+File path: datasets\SAVEE\DC\su09.wav
+True Emotion: Unknown
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.8014
+Disgust: 0.1389
+Fear: 0.0001
+Happy: 0.0553
+Neutral: 0.0033
+Sad: 0.0010
+
+File path: datasets\SAVEE\DC\su10.wav
+True Emotion: Unknown
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9732
+Disgust: 0.0266
+Fear: 0.0002
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\su11.wav
+True Emotion: Unknown
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0040
+Disgust: 0.0000
+Fear: 0.9960
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\DC\su12.wav
+True Emotion: Unknown
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.1611
+Disgust: 0.0109
+Fear: 0.0067
+Happy: 0.4947
+Neutral: 0.0020
+Sad: 0.3246
+
+File path: datasets\SAVEE\DC\su13.wav
+True Emotion: Unknown
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0205
+Disgust: 0.9063
+Fear: 0.0007
+Happy: 0.0288
+Neutral: 0.0028
+Sad: 0.0409
+
+File path: datasets\SAVEE\DC\su14.wav
+True Emotion: Unknown
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.8212
+Disgust: 0.1138
+Fear: 0.0072
+Happy: 0.0347
+Neutral: 0.0082
+Sad: 0.0149
+
+File path: datasets\SAVEE\DC\su15.wav
+True Emotion: Unknown
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.1450
+Disgust: 0.8461
+Fear: 0.0019
+Happy: 0.0039
+Neutral: 0.0000
+Sad: 0.0030
+
+File path: datasets\SAVEE\JE\a01.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9997
+Disgust: 0.0000
+Fear: 0.0001
+Happy: 0.0002
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\a02.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.8602
+Disgust: 0.1275
+Fear: 0.0000
+Happy: 0.0121
+Neutral: 0.0000
+Sad: 0.0002
+
+File path: datasets\SAVEE\JE\a03.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.5961
+Disgust: 0.0021
+Fear: 0.3352
+Happy: 0.0666
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\a04.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9992
+Disgust: 0.0000
+Fear: 0.0001
+Happy: 0.0007
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\a05.wav
+True Emotion: Anger
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0117
+Disgust: 0.9883
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\a06.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9976
+Disgust: 0.0007
+Fear: 0.0000
+Happy: 0.0013
+Neutral: 0.0000
+Sad: 0.0003
+
+File path: datasets\SAVEE\JE\a07.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.8662
+Disgust: 0.0119
+Fear: 0.0892
+Happy: 0.0327
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\a08.wav
+True Emotion: Anger
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0319
+Disgust: 0.9662
+Fear: 0.0000
+Happy: 0.0018
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\a09.wav
+True Emotion: Anger
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0384
+Disgust: 0.9533
+Fear: 0.0072
+Happy: 0.0002
+Neutral: 0.0000
+Sad: 0.0009
+
+File path: datasets\SAVEE\JE\a10.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9126
+Disgust: 0.0873
+Fear: 0.0000
+Happy: 0.0001
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\a11.wav
+True Emotion: Anger
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0453
+Disgust: 0.6282
+Fear: 0.0515
+Happy: 0.2094
+Neutral: 0.0654
+Sad: 0.0003
+
+File path: datasets\SAVEE\JE\a12.wav
+True Emotion: Anger
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0658
+Disgust: 0.0749
+Fear: 0.0133
+Happy: 0.7342
+Neutral: 0.0005
+Sad: 0.1113
+
+File path: datasets\SAVEE\JE\a13.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.8466
+Disgust: 0.0517
+Fear: 0.0133
+Happy: 0.0173
+Neutral: 0.0684
+Sad: 0.0028
+
+File path: datasets\SAVEE\JE\a14.wav
+True Emotion: Anger
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.2517
+Disgust: 0.6077
+Fear: 0.1354
+Happy: 0.0017
+Neutral: 0.0024
+Sad: 0.0011
+
+File path: datasets\SAVEE\JE\a15.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.4400
+Disgust: 0.1057
+Fear: 0.1096
+Happy: 0.2582
+Neutral: 0.0575
+Sad: 0.0291
+
+File path: datasets\SAVEE\JE\d01.wav
+True Emotion: Disgust
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.7862
+Disgust: 0.2135
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0003
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\d02.wav
+True Emotion: Disgust
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9021
+Disgust: 0.0917
+Fear: 0.0000
+Happy: 0.0062
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\d03.wav
+True Emotion: Disgust
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0003
+Disgust: 0.2227
+Fear: 0.0965
+Happy: 0.0013
+Neutral: 0.6776
+Sad: 0.0017
+
+File path: datasets\SAVEE\JE\d04.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.3216
+Disgust: 0.6773
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0010
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\d05.wav
+True Emotion: Disgust
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.7781
+Disgust: 0.2170
+Fear: 0.0000
+Happy: 0.0048
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\d06.wav
+True Emotion: Disgust
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9974
+Disgust: 0.0026
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\d07.wav
+True Emotion: Disgust
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.3632
+Disgust: 0.0020
+Fear: 0.1504
+Happy: 0.0019
+Neutral: 0.4818
+Sad: 0.0008
+
+File path: datasets\SAVEE\JE\d08.wav
+True Emotion: Disgust
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.1549
+Disgust: 0.0071
+Fear: 0.0000
+Happy: 0.0313
+Neutral: 0.8060
+Sad: 0.0008
+
+File path: datasets\SAVEE\JE\d09.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0067
+Disgust: 0.9511
+Fear: 0.0000
+Happy: 0.0001
+Neutral: 0.0408
+Sad: 0.0013
+
+File path: datasets\SAVEE\JE\d10.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0556
+Disgust: 0.9442
+Fear: 0.0002
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\d11.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.2175
+Disgust: 0.7605
+Fear: 0.0027
+Happy: 0.0177
+Neutral: 0.0015
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\d12.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0071
+Disgust: 0.9773
+Fear: 0.0005
+Happy: 0.0150
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\d13.wav
+True Emotion: Disgust
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9850
+Disgust: 0.0052
+Fear: 0.0000
+Happy: 0.0031
+Neutral: 0.0008
+Sad: 0.0058
+
+File path: datasets\SAVEE\JE\d14.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0130
+Disgust: 0.9865
+Fear: 0.0003
+Happy: 0.0001
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\d15.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0003
+Disgust: 0.9583
+Fear: 0.0001
+Happy: 0.0000
+Neutral: 0.0001
+Sad: 0.0412
+
+File path: datasets\SAVEE\JE\f01.wav
+True Emotion: Fear
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9958
+Disgust: 0.0007
+Fear: 0.0025
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0010
+
+File path: datasets\SAVEE\JE\f02.wav
+True Emotion: Fear
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.8932
+Disgust: 0.0255
+Fear: 0.0003
+Happy: 0.0809
+Neutral: 0.0000
+Sad: 0.0001
+
+File path: datasets\SAVEE\JE\f03.wav
+True Emotion: Fear
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9992
+Fear: 0.0004
+Happy: 0.0000
+Neutral: 0.0004
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\f04.wav
+True Emotion: Fear
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9565
+Disgust: 0.0003
+Fear: 0.0088
+Happy: 0.0344
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\f05.wav
+True Emotion: Fear
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.1256
+Disgust: 0.3191
+Fear: 0.0556
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.4998
+
+File path: datasets\SAVEE\JE\f06.wav
+True Emotion: Fear
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9997
+Disgust: 0.0003
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\f07.wav
+True Emotion: Fear
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0045
+Disgust: 0.3823
+Fear: 0.3244
+Happy: 0.2029
+Neutral: 0.0237
+Sad: 0.0623
+
+File path: datasets\SAVEE\JE\f08.wav
+True Emotion: Fear
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0475
+Disgust: 0.7036
+Fear: 0.1384
+Happy: 0.1098
+Neutral: 0.0006
+Sad: 0.0001
+
+File path: datasets\SAVEE\JE\f09.wav
+True Emotion: Fear
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9183
+Disgust: 0.0224
+Fear: 0.0317
+Happy: 0.0203
+Neutral: 0.0065
+Sad: 0.0007
+
+File path: datasets\SAVEE\JE\f10.wav
+True Emotion: Fear
+Predicted Emotion: Anger
+Probabilities:
+Anger: 1.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\f11.wav
+True Emotion: Fear
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0222
+Disgust: 0.7844
+Fear: 0.0000
+Happy: 0.1761
+Neutral: 0.0172
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\f12.wav
+True Emotion: Fear
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.6210
+Disgust: 0.3714
+Fear: 0.0008
+Happy: 0.0000
+Neutral: 0.0047
+Sad: 0.0020
+
+File path: datasets\SAVEE\JE\f13.wav
+True Emotion: Fear
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.5356
+Disgust: 0.0013
+Fear: 0.4627
+Happy: 0.0003
+Neutral: 0.0001
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\f14.wav
+True Emotion: Fear
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.1364
+Disgust: 0.3770
+Fear: 0.3021
+Happy: 0.0529
+Neutral: 0.0000
+Sad: 0.1317
+
+File path: datasets\SAVEE\JE\f15.wav
+True Emotion: Fear
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.1780
+Disgust: 0.8204
+Fear: 0.0001
+Happy: 0.0005
+Neutral: 0.0010
+Sad: 0.0001
+
+File path: datasets\SAVEE\JE\h01.wav
+True Emotion: Happy
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.4918
+Disgust: 0.4480
+Fear: 0.0000
+Happy: 0.0602
+Neutral: 0.0000
+Sad: 0.0001
+
+File path: datasets\SAVEE\JE\h02.wav
+True Emotion: Happy
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9990
+Disgust: 0.0010
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\h03.wav
+True Emotion: Happy
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.1992
+Disgust: 0.0001
+Fear: 0.1159
+Happy: 0.6843
+Neutral: 0.0000
+Sad: 0.0004
+
+File path: datasets\SAVEE\JE\h04.wav
+True Emotion: Happy
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.1213
+Disgust: 0.5253
+Fear: 0.0010
+Happy: 0.1591
+Neutral: 0.1925
+Sad: 0.0008
+
+File path: datasets\SAVEE\JE\h05.wav
+True Emotion: Happy
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9422
+Disgust: 0.0011
+Fear: 0.0000
+Happy: 0.0539
+Neutral: 0.0024
+Sad: 0.0004
+
+File path: datasets\SAVEE\JE\h06.wav
+True Emotion: Happy
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9649
+Disgust: 0.0304
+Fear: 0.0007
+Happy: 0.0035
+Neutral: 0.0000
+Sad: 0.0005
+
+File path: datasets\SAVEE\JE\h07.wav
+True Emotion: Happy
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0828
+Disgust: 0.1969
+Fear: 0.7174
+Happy: 0.0022
+Neutral: 0.0003
+Sad: 0.0005
+
+File path: datasets\SAVEE\JE\h08.wav
+True Emotion: Happy
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9989
+Disgust: 0.0009
+Fear: 0.0000
+Happy: 0.0002
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\h09.wav
+True Emotion: Happy
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9050
+Disgust: 0.0437
+Fear: 0.0000
+Happy: 0.0513
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\h10.wav
+True Emotion: Happy
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9889
+Disgust: 0.0002
+Fear: 0.0000
+Happy: 0.0109
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\h11.wav
+True Emotion: Happy
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.6728
+Disgust: 0.1500
+Fear: 0.0001
+Happy: 0.0206
+Neutral: 0.1470
+Sad: 0.0095
+
+File path: datasets\SAVEE\JE\h12.wav
+True Emotion: Happy
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.8726
+Disgust: 0.1273
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\h13.wav
+True Emotion: Happy
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.1094
+Disgust: 0.0021
+Fear: 0.8727
+Happy: 0.0153
+Neutral: 0.0000
+Sad: 0.0004
+
+File path: datasets\SAVEE\JE\h14.wav
+True Emotion: Happy
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0509
+Disgust: 0.5772
+Fear: 0.0003
+Happy: 0.3698
+Neutral: 0.0004
+Sad: 0.0014
+
+File path: datasets\SAVEE\JE\h15.wav
+True Emotion: Happy
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.2201
+Disgust: 0.7797
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0002
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\n01.wav
+True Emotion: Neutral
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.8443
+Disgust: 0.1543
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0014
+
+File path: datasets\SAVEE\JE\n02.wav
+True Emotion: Neutral
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.6081
+Disgust: 0.3903
+Fear: 0.0007
+Happy: 0.0005
+Neutral: 0.0000
+Sad: 0.0003
+
+File path: datasets\SAVEE\JE\n03.wav
+True Emotion: Neutral
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0006
+Disgust: 0.0013
+Fear: 0.0014
+Happy: 0.0135
+Neutral: 0.9786
+Sad: 0.0045
+
+File path: datasets\SAVEE\JE\n04.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0001
+Disgust: 0.5826
+Fear: 0.0161
+Happy: 0.2084
+Neutral: 0.0009
+Sad: 0.1919
+
+File path: datasets\SAVEE\JE\n05.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0085
+Disgust: 0.8409
+Fear: 0.0000
+Happy: 0.0067
+Neutral: 0.1044
+Sad: 0.0394
+
+File path: datasets\SAVEE\JE\n06.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0001
+Disgust: 0.9999
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\n07.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0002
+Disgust: 0.9936
+Fear: 0.0000
+Happy: 0.0061
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\n08.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0397
+Disgust: 0.6013
+Fear: 0.0000
+Happy: 0.0026
+Neutral: 0.3558
+Sad: 0.0005
+
+File path: datasets\SAVEE\JE\n09.wav
+True Emotion: Neutral
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.6469
+Disgust: 0.2971
+Fear: 0.0002
+Happy: 0.0535
+Neutral: 0.0016
+Sad: 0.0006
+
+File path: datasets\SAVEE\JE\n10.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0014
+Disgust: 0.9979
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0006
+
+File path: datasets\SAVEE\JE\n11.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.1222
+Disgust: 0.8543
+Fear: 0.0000
+Happy: 0.0001
+Neutral: 0.0006
+Sad: 0.0227
+
+File path: datasets\SAVEE\JE\n12.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0129
+Disgust: 0.9740
+Fear: 0.0000
+Happy: 0.0057
+Neutral: 0.0071
+Sad: 0.0002
+
+File path: datasets\SAVEE\JE\n13.wav
+True Emotion: Neutral
+Predicted Emotion: Anger
+Probabilities:
+Anger: 1.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\n14.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.2554
+Disgust: 0.7200
+Fear: 0.0001
+Happy: 0.0223
+Neutral: 0.0021
+Sad: 0.0002
+
+File path: datasets\SAVEE\JE\n15.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9997
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0001
+Sad: 0.0002
+
+File path: datasets\SAVEE\JE\n16.wav
+True Emotion: Neutral
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9918
+Disgust: 0.0059
+Fear: 0.0000
+Happy: 0.0015
+Neutral: 0.0007
+Sad: 0.0001
+
+File path: datasets\SAVEE\JE\n17.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0627
+Disgust: 0.9323
+Fear: 0.0000
+Happy: 0.0001
+Neutral: 0.0011
+Sad: 0.0038
+
+File path: datasets\SAVEE\JE\n18.wav
+True Emotion: Neutral
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0876
+Happy: 0.9076
+Neutral: 0.0047
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\n19.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 1.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\n20.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0128
+Disgust: 0.9782
+Fear: 0.0000
+Happy: 0.0087
+Neutral: 0.0001
+Sad: 0.0002
+
+File path: datasets\SAVEE\JE\n21.wav
+True Emotion: Neutral
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.7740
+Disgust: 0.1814
+Fear: 0.0000
+Happy: 0.0143
+Neutral: 0.0083
+Sad: 0.0219
+
+File path: datasets\SAVEE\JE\n22.wav
+True Emotion: Neutral
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0476
+Disgust: 0.3580
+Fear: 0.0000
+Happy: 0.0001
+Neutral: 0.0006
+Sad: 0.5937
+
+File path: datasets\SAVEE\JE\n23.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9999
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\n24.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0002
+Disgust: 0.8634
+Fear: 0.0004
+Happy: 0.0000
+Neutral: 0.1306
+Sad: 0.0054
+
+File path: datasets\SAVEE\JE\n25.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.1255
+Disgust: 0.8710
+Fear: 0.0030
+Happy: 0.0005
+Neutral: 0.0001
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\n26.wav
+True Emotion: Neutral
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0060
+Disgust: 0.0035
+Fear: 0.0009
+Happy: 0.9848
+Neutral: 0.0043
+Sad: 0.0004
+
+File path: datasets\SAVEE\JE\n27.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0021
+Disgust: 0.9891
+Fear: 0.0000
+Happy: 0.0010
+Neutral: 0.0005
+Sad: 0.0073
+
+File path: datasets\SAVEE\JE\n28.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0004
+Disgust: 0.9994
+Fear: 0.0000
+Happy: 0.0002
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\n29.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0057
+Disgust: 0.9936
+Fear: 0.0000
+Happy: 0.0001
+Neutral: 0.0003
+Sad: 0.0004
+
+File path: datasets\SAVEE\JE\n30.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0344
+Disgust: 0.6354
+Fear: 0.0001
+Happy: 0.0000
+Neutral: 0.3246
+Sad: 0.0055
+
+File path: datasets\SAVEE\JE\sa01.wav
+True Emotion: Sad
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0009
+Disgust: 0.9988
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0003
+
+File path: datasets\SAVEE\JE\sa02.wav
+True Emotion: Sad
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0002
+Disgust: 0.9937
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0060
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\sa03.wav
+True Emotion: Sad
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0228
+Disgust: 0.0011
+Fear: 0.3662
+Happy: 0.6067
+Neutral: 0.0004
+Sad: 0.0029
+
+File path: datasets\SAVEE\JE\sa04.wav
+True Emotion: Sad
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0008
+Disgust: 0.4665
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0425
+Sad: 0.4902
+
+File path: datasets\SAVEE\JE\sa05.wav
+True Emotion: Sad
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9985
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0014
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\sa06.wav
+True Emotion: Sad
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0002
+Disgust: 0.2580
+Fear: 0.0013
+Happy: 0.0016
+Neutral: 0.0007
+Sad: 0.7381
+
+File path: datasets\SAVEE\JE\sa07.wav
+True Emotion: Sad
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9987
+Fear: 0.0012
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0001
+
+File path: datasets\SAVEE\JE\sa08.wav
+True Emotion: Sad
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0001
+Disgust: 0.9475
+Fear: 0.0442
+Happy: 0.0000
+Neutral: 0.0002
+Sad: 0.0080
+
+File path: datasets\SAVEE\JE\sa09.wav
+True Emotion: Sad
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0520
+Fear: 0.9412
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0068
+
+File path: datasets\SAVEE\JE\sa10.wav
+True Emotion: Sad
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0010
+Disgust: 0.8450
+Fear: 0.0213
+Happy: 0.0060
+Neutral: 0.0146
+Sad: 0.1120
+
+File path: datasets\SAVEE\JE\sa11.wav
+True Emotion: Sad
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0001
+Disgust: 0.9945
+Fear: 0.0048
+Happy: 0.0000
+Neutral: 0.0005
+Sad: 0.0002
+
+File path: datasets\SAVEE\JE\sa12.wav
+True Emotion: Sad
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9997
+Fear: 0.0000
+Happy: 0.0003
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\sa13.wav
+True Emotion: Sad
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0081
+Disgust: 0.7698
+Fear: 0.0142
+Happy: 0.0128
+Neutral: 0.1930
+Sad: 0.0021
+
+File path: datasets\SAVEE\JE\sa14.wav
+True Emotion: Sad
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0770
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.9230
+
+File path: datasets\SAVEE\JE\sa15.wav
+True Emotion: Sad
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9965
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0035
+
+File path: datasets\SAVEE\JE\su01.wav
+True Emotion: Unknown
+Predicted Emotion: Anger
+Probabilities:
+Anger: 1.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\su02.wav
+True Emotion: Unknown
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.7724
+Disgust: 0.0322
+Fear: 0.1884
+Happy: 0.0069
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\su03.wav
+True Emotion: Unknown
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0195
+Disgust: 0.0001
+Fear: 0.2791
+Happy: 0.6983
+Neutral: 0.0023
+Sad: 0.0008
+
+File path: datasets\SAVEE\JE\su04.wav
+True Emotion: Unknown
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9990
+Disgust: 0.0003
+Fear: 0.0001
+Happy: 0.0006
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\su05.wav
+True Emotion: Unknown
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.8382
+Disgust: 0.1591
+Fear: 0.0022
+Happy: 0.0000
+Neutral: 0.0001
+Sad: 0.0003
+
+File path: datasets\SAVEE\JE\su06.wav
+True Emotion: Unknown
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0756
+Disgust: 0.8771
+Fear: 0.0257
+Happy: 0.0118
+Neutral: 0.0000
+Sad: 0.0098
+
+File path: datasets\SAVEE\JE\su07.wav
+True Emotion: Unknown
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.1539
+Disgust: 0.4682
+Fear: 0.3671
+Happy: 0.0080
+Neutral: 0.0000
+Sad: 0.0028
+
+File path: datasets\SAVEE\JE\su08.wav
+True Emotion: Unknown
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0045
+Disgust: 0.8538
+Fear: 0.1232
+Happy: 0.0029
+Neutral: 0.0000
+Sad: 0.0156
+
+File path: datasets\SAVEE\JE\su09.wav
+True Emotion: Unknown
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9988
+Disgust: 0.0004
+Fear: 0.0000
+Happy: 0.0007
+Neutral: 0.0000
+Sad: 0.0001
+
+File path: datasets\SAVEE\JE\su10.wav
+True Emotion: Unknown
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9832
+Disgust: 0.0040
+Fear: 0.0000
+Happy: 0.0127
+Neutral: 0.0001
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\su11.wav
+True Emotion: Unknown
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.4993
+Disgust: 0.4893
+Fear: 0.0009
+Happy: 0.0000
+Neutral: 0.0002
+Sad: 0.0103
+
+File path: datasets\SAVEE\JE\su12.wav
+True Emotion: Unknown
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9715
+Disgust: 0.0030
+Fear: 0.0000
+Happy: 0.0254
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JE\su13.wav
+True Emotion: Unknown
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9506
+Disgust: 0.0387
+Fear: 0.0074
+Happy: 0.0024
+Neutral: 0.0000
+Sad: 0.0009
+
+File path: datasets\SAVEE\JE\su14.wav
+True Emotion: Unknown
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0001
+Disgust: 0.9779
+Fear: 0.0000
+Happy: 0.0001
+Neutral: 0.0213
+Sad: 0.0006
+
+File path: datasets\SAVEE\JE\su15.wav
+True Emotion: Unknown
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.2288
+Disgust: 0.5132
+Fear: 0.0008
+Happy: 0.2397
+Neutral: 0.0163
+Sad: 0.0012
+
+File path: datasets\SAVEE\JK\a01.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9963
+Disgust: 0.0000
+Fear: 0.0004
+Happy: 0.0002
+Neutral: 0.0000
+Sad: 0.0031
+
+File path: datasets\SAVEE\JK\a02.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9996
+Disgust: 0.0004
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\a03.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9985
+Disgust: 0.0000
+Fear: 0.0015
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\a04.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9999
+Disgust: 0.0001
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\a05.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.6635
+Disgust: 0.3328
+Fear: 0.0001
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0036
+
+File path: datasets\SAVEE\JK\a06.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9944
+Disgust: 0.0056
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\a07.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9993
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0006
+Neutral: 0.0000
+Sad: 0.0001
+
+File path: datasets\SAVEE\JK\a08.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9994
+Disgust: 0.0004
+Fear: 0.0000
+Happy: 0.0002
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\a09.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9759
+Disgust: 0.0240
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\a10.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.8787
+Disgust: 0.0063
+Fear: 0.0002
+Happy: 0.1132
+Neutral: 0.0000
+Sad: 0.0015
+
+File path: datasets\SAVEE\JK\a11.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 1.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\a12.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9973
+Disgust: 0.0019
+Fear: 0.0000
+Happy: 0.0008
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\a13.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.8916
+Disgust: 0.1068
+Fear: 0.0004
+Happy: 0.0013
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\a14.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.4707
+Disgust: 0.1526
+Fear: 0.0159
+Happy: 0.3534
+Neutral: 0.0000
+Sad: 0.0074
+
+File path: datasets\SAVEE\JK\a15.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9895
+Disgust: 0.0026
+Fear: 0.0077
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0001
+
+File path: datasets\SAVEE\JK\d01.wav
+True Emotion: Disgust
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9530
+Disgust: 0.0436
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0033
+
+File path: datasets\SAVEE\JK\d02.wav
+True Emotion: Disgust
+Predicted Emotion: Anger
+Probabilities:
+Anger: 1.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\d03.wav
+True Emotion: Disgust
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9293
+Disgust: 0.0631
+Fear: 0.0056
+Happy: 0.0013
+Neutral: 0.0007
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\d04.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0229
+Disgust: 0.9748
+Fear: 0.0000
+Happy: 0.0001
+Neutral: 0.0001
+Sad: 0.0022
+
+File path: datasets\SAVEE\JK\d05.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0619
+Disgust: 0.8422
+Fear: 0.0010
+Happy: 0.0856
+Neutral: 0.0001
+Sad: 0.0092
+
+File path: datasets\SAVEE\JK\d06.wav
+True Emotion: Disgust
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9989
+Disgust: 0.0003
+Fear: 0.0000
+Happy: 0.0007
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\d07.wav
+True Emotion: Disgust
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9996
+Disgust: 0.0000
+Fear: 0.0004
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\d08.wav
+True Emotion: Disgust
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9987
+Disgust: 0.0012
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0001
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\d09.wav
+True Emotion: Disgust
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.8197
+Disgust: 0.1797
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0005
+
+File path: datasets\SAVEE\JK\d10.wav
+True Emotion: Disgust
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9894
+Disgust: 0.0103
+Fear: 0.0001
+Happy: 0.0002
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\d11.wav
+True Emotion: Disgust
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9637
+Disgust: 0.0222
+Fear: 0.0030
+Happy: 0.0005
+Neutral: 0.0003
+Sad: 0.0103
+
+File path: datasets\SAVEE\JK\d12.wav
+True Emotion: Disgust
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9286
+Disgust: 0.0435
+Fear: 0.0000
+Happy: 0.0021
+Neutral: 0.0259
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\d13.wav
+True Emotion: Disgust
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.8624
+Disgust: 0.1360
+Fear: 0.0000
+Happy: 0.0006
+Neutral: 0.0000
+Sad: 0.0009
+
+File path: datasets\SAVEE\JK\d14.wav
+True Emotion: Disgust
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9984
+Disgust: 0.0015
+Fear: 0.0000
+Happy: 0.0001
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\d15.wav
+True Emotion: Disgust
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9915
+Disgust: 0.0049
+Fear: 0.0031
+Happy: 0.0003
+Neutral: 0.0001
+Sad: 0.0001
+
+File path: datasets\SAVEE\JK\f01.wav
+True Emotion: Fear
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9994
+Disgust: 0.0000
+Fear: 0.0005
+Happy: 0.0001
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\f02.wav
+True Emotion: Fear
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9998
+Disgust: 0.0001
+Fear: 0.0000
+Happy: 0.0001
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\f03.wav
+True Emotion: Fear
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9609
+Disgust: 0.0059
+Fear: 0.0020
+Happy: 0.0311
+Neutral: 0.0000
+Sad: 0.0001
+
+File path: datasets\SAVEE\JK\f04.wav
+True Emotion: Fear
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9847
+Disgust: 0.0003
+Fear: 0.0005
+Happy: 0.0140
+Neutral: 0.0000
+Sad: 0.0005
+
+File path: datasets\SAVEE\JK\f05.wav
+True Emotion: Fear
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9998
+Disgust: 0.0001
+Fear: 0.0000
+Happy: 0.0001
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\f06.wav
+True Emotion: Fear
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9981
+Disgust: 0.0019
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\f07.wav
+True Emotion: Fear
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9990
+Disgust: 0.0008
+Fear: 0.0001
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\f08.wav
+True Emotion: Fear
+Predicted Emotion: Anger
+Probabilities:
+Anger: 1.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\f09.wav
+True Emotion: Fear
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9986
+Disgust: 0.0001
+Fear: 0.0000
+Happy: 0.0008
+Neutral: 0.0000
+Sad: 0.0005
+
+File path: datasets\SAVEE\JK\f10.wav
+True Emotion: Fear
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0411
+Disgust: 0.0000
+Fear: 0.8881
+Happy: 0.0709
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\f11.wav
+True Emotion: Fear
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9988
+Disgust: 0.0001
+Fear: 0.0001
+Happy: 0.0011
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\f12.wav
+True Emotion: Fear
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9975
+Disgust: 0.0005
+Fear: 0.0001
+Happy: 0.0018
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\f13.wav
+True Emotion: Fear
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.7395
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.2575
+Neutral: 0.0000
+Sad: 0.0029
+
+File path: datasets\SAVEE\JK\f14.wav
+True Emotion: Fear
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.6396
+Disgust: 0.2289
+Fear: 0.1307
+Happy: 0.0006
+Neutral: 0.0000
+Sad: 0.0002
+
+File path: datasets\SAVEE\JK\f15.wav
+True Emotion: Fear
+Predicted Emotion: Anger
+Probabilities:
+Anger: 1.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\h01.wav
+True Emotion: Happy
+Predicted Emotion: Anger
+Probabilities:
+Anger: 1.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\h02.wav
+True Emotion: Happy
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9695
+Disgust: 0.0002
+Fear: 0.0001
+Happy: 0.0301
+Neutral: 0.0001
+Sad: 0.0001
+
+File path: datasets\SAVEE\JK\h03.wav
+True Emotion: Happy
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9999
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\h04.wav
+True Emotion: Happy
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9999
+Disgust: 0.0001
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\h05.wav
+True Emotion: Happy
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9999
+Disgust: 0.0001
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\h06.wav
+True Emotion: Happy
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0283
+Disgust: 0.9602
+Fear: 0.0006
+Happy: 0.0047
+Neutral: 0.0000
+Sad: 0.0062
+
+File path: datasets\SAVEE\JK\h07.wav
+True Emotion: Happy
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9998
+Disgust: 0.0002
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\h08.wav
+True Emotion: Happy
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0018
+Disgust: 0.0000
+Fear: 0.9982
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\h09.wav
+True Emotion: Happy
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9844
+Disgust: 0.0000
+Fear: 0.0090
+Happy: 0.0019
+Neutral: 0.0048
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\h10.wav
+True Emotion: Happy
+Predicted Emotion: Anger
+Probabilities:
+Anger: 1.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\h11.wav
+True Emotion: Happy
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9415
+Disgust: 0.0010
+Fear: 0.0565
+Happy: 0.0010
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\h12.wav
+True Emotion: Happy
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9130
+Disgust: 0.0148
+Fear: 0.0000
+Happy: 0.0045
+Neutral: 0.0000
+Sad: 0.0677
+
+File path: datasets\SAVEE\JK\h13.wav
+True Emotion: Happy
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9019
+Disgust: 0.0001
+Fear: 0.0490
+Happy: 0.0491
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\h14.wav
+True Emotion: Happy
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0449
+Disgust: 0.9505
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0045
+
+File path: datasets\SAVEE\JK\h15.wav
+True Emotion: Happy
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.8453
+Disgust: 0.0313
+Fear: 0.1075
+Happy: 0.0134
+Neutral: 0.0000
+Sad: 0.0025
+
+File path: datasets\SAVEE\JK\n01.wav
+True Emotion: Neutral
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.7796
+Disgust: 0.1974
+Fear: 0.0000
+Happy: 0.0185
+Neutral: 0.0002
+Sad: 0.0042
+
+File path: datasets\SAVEE\JK\n02.wav
+True Emotion: Neutral
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9999
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0001
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\n03.wav
+True Emotion: Neutral
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9853
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0146
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\n04.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0844
+Disgust: 0.9091
+Fear: 0.0001
+Happy: 0.0001
+Neutral: 0.0062
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\n05.wav
+True Emotion: Neutral
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.8607
+Disgust: 0.1310
+Fear: 0.0000
+Happy: 0.0001
+Neutral: 0.0038
+Sad: 0.0044
+
+File path: datasets\SAVEE\JK\n06.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0782
+Disgust: 0.9218
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\n07.wav
+True Emotion: Neutral
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9431
+Disgust: 0.0391
+Fear: 0.0002
+Happy: 0.0000
+Neutral: 0.0001
+Sad: 0.0175
+
+File path: datasets\SAVEE\JK\n08.wav
+True Emotion: Neutral
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.2879
+Disgust: 0.0233
+Fear: 0.0120
+Happy: 0.6575
+Neutral: 0.0123
+Sad: 0.0071
+
+File path: datasets\SAVEE\JK\n09.wav
+True Emotion: Neutral
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9884
+Disgust: 0.0116
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\n10.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.3786
+Disgust: 0.6021
+Fear: 0.0002
+Happy: 0.0145
+Neutral: 0.0040
+Sad: 0.0005
+
+File path: datasets\SAVEE\JK\n11.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.4321
+Disgust: 0.5568
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0110
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\n12.wav
+True Emotion: Neutral
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9995
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0005
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\n13.wav
+True Emotion: Neutral
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9816
+Disgust: 0.0182
+Fear: 0.0000
+Happy: 0.0001
+Neutral: 0.0001
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\n14.wav
+True Emotion: Neutral
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.8924
+Disgust: 0.0709
+Fear: 0.0000
+Happy: 0.0009
+Neutral: 0.0297
+Sad: 0.0061
+
+File path: datasets\SAVEE\JK\n15.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.1167
+Disgust: 0.8598
+Fear: 0.0000
+Happy: 0.0001
+Neutral: 0.0231
+Sad: 0.0003
+
+File path: datasets\SAVEE\JK\n16.wav
+True Emotion: Neutral
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9918
+Disgust: 0.0001
+Fear: 0.0000
+Happy: 0.0013
+Neutral: 0.0003
+Sad: 0.0065
+
+File path: datasets\SAVEE\JK\n17.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.3275
+Disgust: 0.6724
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\n18.wav
+True Emotion: Neutral
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9967
+Disgust: 0.0001
+Fear: 0.0000
+Happy: 0.0032
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\n19.wav
+True Emotion: Neutral
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9982
+Disgust: 0.0012
+Fear: 0.0000
+Happy: 0.0003
+Neutral: 0.0001
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\n20.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.2609
+Disgust: 0.7390
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\n21.wav
+True Emotion: Neutral
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.8917
+Disgust: 0.1083
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\n22.wav
+True Emotion: Neutral
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.2543
+Disgust: 0.0992
+Fear: 0.0469
+Happy: 0.5315
+Neutral: 0.0675
+Sad: 0.0007
+
+File path: datasets\SAVEE\JK\n23.wav
+True Emotion: Neutral
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9723
+Disgust: 0.0000
+Fear: 0.0001
+Happy: 0.0260
+Neutral: 0.0015
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\n24.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.3111
+Disgust: 0.6878
+Fear: 0.0003
+Happy: 0.0008
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\n25.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0917
+Disgust: 0.9065
+Fear: 0.0003
+Happy: 0.0012
+Neutral: 0.0000
+Sad: 0.0002
+
+File path: datasets\SAVEE\JK\n26.wav
+True Emotion: Neutral
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0835
+Disgust: 0.0033
+Fear: 0.0001
+Happy: 0.0001
+Neutral: 0.9130
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\n27.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0162
+Disgust: 0.6873
+Fear: 0.0004
+Happy: 0.0005
+Neutral: 0.2218
+Sad: 0.0738
+
+File path: datasets\SAVEE\JK\n28.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0453
+Disgust: 0.9546
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\n29.wav
+True Emotion: Neutral
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9127
+Disgust: 0.0147
+Fear: 0.0367
+Happy: 0.0154
+Neutral: 0.0206
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\n30.wav
+True Emotion: Neutral
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.7783
+Disgust: 0.2217
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\sa01.wav
+True Emotion: Sad
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9930
+Disgust: 0.0003
+Fear: 0.0010
+Happy: 0.0005
+Neutral: 0.0000
+Sad: 0.0053
+
+File path: datasets\SAVEE\JK\sa02.wav
+True Emotion: Sad
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.8894
+Disgust: 0.0005
+Fear: 0.0000
+Happy: 0.1101
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\sa03.wav
+True Emotion: Sad
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9632
+Disgust: 0.0367
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0001
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\sa04.wav
+True Emotion: Sad
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.7859
+Disgust: 0.1595
+Fear: 0.0011
+Happy: 0.0515
+Neutral: 0.0018
+Sad: 0.0003
+
+File path: datasets\SAVEE\JK\sa05.wav
+True Emotion: Sad
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.5956
+Disgust: 0.3965
+Fear: 0.0002
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0077
+
+File path: datasets\SAVEE\JK\sa06.wav
+True Emotion: Sad
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.6205
+Disgust: 0.3747
+Fear: 0.0000
+Happy: 0.0013
+Neutral: 0.0014
+Sad: 0.0021
+
+File path: datasets\SAVEE\JK\sa07.wav
+True Emotion: Sad
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0001
+Fear: 0.0016
+Happy: 0.9796
+Neutral: 0.0068
+Sad: 0.0119
+
+File path: datasets\SAVEE\JK\sa08.wav
+True Emotion: Sad
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9996
+Disgust: 0.0001
+Fear: 0.0000
+Happy: 0.0002
+Neutral: 0.0001
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\sa09.wav
+True Emotion: Sad
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0434
+Disgust: 0.9566
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\sa10.wav
+True Emotion: Sad
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.8552
+Disgust: 0.1429
+Fear: 0.0000
+Happy: 0.0008
+Neutral: 0.0010
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\sa11.wav
+True Emotion: Sad
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0001
+Disgust: 0.9990
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0008
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\sa12.wav
+True Emotion: Sad
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0102
+Disgust: 0.9896
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0001
+
+File path: datasets\SAVEE\JK\sa13.wav
+True Emotion: Sad
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9946
+Disgust: 0.0020
+Fear: 0.0000
+Happy: 0.0020
+Neutral: 0.0014
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\sa14.wav
+True Emotion: Sad
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9660
+Disgust: 0.0247
+Fear: 0.0000
+Happy: 0.0012
+Neutral: 0.0041
+Sad: 0.0040
+
+File path: datasets\SAVEE\JK\sa15.wav
+True Emotion: Sad
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0372
+Disgust: 0.8218
+Fear: 0.0028
+Happy: 0.0001
+Neutral: 0.0232
+Sad: 0.1149
+
+File path: datasets\SAVEE\JK\su01.wav
+True Emotion: Unknown
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9996
+Disgust: 0.0001
+Fear: 0.0000
+Happy: 0.0003
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\su02.wav
+True Emotion: Unknown
+Predicted Emotion: Anger
+Probabilities:
+Anger: 1.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\su03.wav
+True Emotion: Unknown
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.4988
+Disgust: 0.0072
+Fear: 0.4766
+Happy: 0.0173
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\su04.wav
+True Emotion: Unknown
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9996
+Disgust: 0.0000
+Fear: 0.0003
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\su05.wav
+True Emotion: Unknown
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0235
+Disgust: 0.9748
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0017
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\su06.wav
+True Emotion: Unknown
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9869
+Disgust: 0.0128
+Fear: 0.0001
+Happy: 0.0001
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\su07.wav
+True Emotion: Unknown
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.4776
+Disgust: 0.0874
+Fear: 0.0075
+Happy: 0.1182
+Neutral: 0.0000
+Sad: 0.3094
+
+File path: datasets\SAVEE\JK\su08.wav
+True Emotion: Unknown
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9944
+Disgust: 0.0040
+Fear: 0.0001
+Happy: 0.0012
+Neutral: 0.0000
+Sad: 0.0003
+
+File path: datasets\SAVEE\JK\su09.wav
+True Emotion: Unknown
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.7155
+Disgust: 0.2844
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\su10.wav
+True Emotion: Unknown
+Predicted Emotion: Anger
+Probabilities:
+Anger: 1.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\su11.wav
+True Emotion: Unknown
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9763
+Disgust: 0.0000
+Fear: 0.0237
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\su12.wav
+True Emotion: Unknown
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9986
+Disgust: 0.0000
+Fear: 0.0003
+Happy: 0.0011
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\su13.wav
+True Emotion: Unknown
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0244
+Disgust: 0.0186
+Fear: 0.9521
+Happy: 0.0035
+Neutral: 0.0000
+Sad: 0.0014
+
+File path: datasets\SAVEE\JK\su14.wav
+True Emotion: Unknown
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9904
+Disgust: 0.0000
+Fear: 0.0002
+Happy: 0.0093
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\JK\su15.wav
+True Emotion: Unknown
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9839
+Disgust: 0.0059
+Fear: 0.0102
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\KL\a01.wav
+True Emotion: Anger
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0035
+Fear: 0.0000
+Happy: 0.9731
+Neutral: 0.0016
+Sad: 0.0217
+
+File path: datasets\SAVEE\KL\a02.wav
+True Emotion: Anger
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0003
+Fear: 0.0003
+Happy: 0.0000
+Neutral: 0.0158
+Sad: 0.9836
+
+File path: datasets\SAVEE\KL\a03.wav
+True Emotion: Anger
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.9998
+Happy: 0.0000
+Neutral: 0.0001
+Sad: 0.0002
+
+File path: datasets\SAVEE\KL\a04.wav
+True Emotion: Anger
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0010
+Fear: 0.0047
+Happy: 0.0000
+Neutral: 0.9927
+Sad: 0.0017
+
+File path: datasets\SAVEE\KL\a05.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.7759
+Disgust: 0.0156
+Fear: 0.0434
+Happy: 0.0286
+Neutral: 0.0015
+Sad: 0.1350
+
+File path: datasets\SAVEE\KL\a06.wav
+True Emotion: Anger
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.1074
+Disgust: 0.0000
+Fear: 0.8926
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\KL\a07.wav
+True Emotion: Anger
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9751
+Fear: 0.0001
+Happy: 0.0248
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\KL\a08.wav
+True Emotion: Anger
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0005
+Disgust: 0.9995
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\KL\a09.wav
+True Emotion: Anger
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0114
+Disgust: 0.0005
+Fear: 0.0000
+Happy: 0.0001
+Neutral: 0.0000
+Sad: 0.9881
+
+File path: datasets\SAVEE\KL\a10.wav
+True Emotion: Anger
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0308
+Disgust: 0.9662
+Fear: 0.0008
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0021
+
+File path: datasets\SAVEE\KL\a11.wav
+True Emotion: Anger
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0045
+Disgust: 0.0000
+Fear: 0.0001
+Happy: 0.0006
+Neutral: 0.9946
+Sad: 0.0001
+
+File path: datasets\SAVEE\KL\a12.wav
+True Emotion: Anger
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.5148
+Disgust: 0.0186
+Fear: 0.0176
+Happy: 0.0001
+Neutral: 0.0016
+Sad: 0.4472
+
+File path: datasets\SAVEE\KL\a13.wav
+True Emotion: Anger
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9992
+Fear: 0.0000
+Happy: 0.0001
+Neutral: 0.0000
+Sad: 0.0007
+
+File path: datasets\SAVEE\KL\a14.wav
+True Emotion: Anger
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.5485
+Fear: 0.0301
+Happy: 0.0000
+Neutral: 0.0745
+Sad: 0.3468
+
+File path: datasets\SAVEE\KL\a15.wav
+True Emotion: Anger
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0002
+Disgust: 0.0133
+Fear: 0.0000
+Happy: 0.0009
+Neutral: 0.0364
+Sad: 0.9492
+
+File path: datasets\SAVEE\KL\d01.wav
+True Emotion: Disgust
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.6053
+Disgust: 0.2281
+Fear: 0.0000
+Happy: 0.0564
+Neutral: 0.0981
+Sad: 0.0121
+
+File path: datasets\SAVEE\KL\d02.wav
+True Emotion: Disgust
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0895
+Disgust: 0.0576
+Fear: 0.0542
+Happy: 0.1381
+Neutral: 0.6487
+Sad: 0.0119
+
+File path: datasets\SAVEE\KL\d03.wav
+True Emotion: Disgust
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0011
+Fear: 0.0575
+Happy: 0.8014
+Neutral: 0.1393
+Sad: 0.0007
+
+File path: datasets\SAVEE\KL\d04.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0003
+Disgust: 0.9656
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0001
+Sad: 0.0339
+
+File path: datasets\SAVEE\KL\d05.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9985
+Fear: 0.0006
+Happy: 0.0000
+Neutral: 0.0005
+Sad: 0.0004
+
+File path: datasets\SAVEE\KL\d06.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9011
+Fear: 0.0080
+Happy: 0.0011
+Neutral: 0.0321
+Sad: 0.0577
+
+File path: datasets\SAVEE\KL\d07.wav
+True Emotion: Disgust
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0001
+Fear: 0.0027
+Happy: 0.0001
+Neutral: 0.9969
+Sad: 0.0002
+
+File path: datasets\SAVEE\KL\d08.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0154
+Disgust: 0.9799
+Fear: 0.0002
+Happy: 0.0010
+Neutral: 0.0000
+Sad: 0.0034
+
+File path: datasets\SAVEE\KL\d09.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0001
+Disgust: 0.9148
+Fear: 0.0000
+Happy: 0.0005
+Neutral: 0.0000
+Sad: 0.0846
+
+File path: datasets\SAVEE\KL\d10.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.7511
+Fear: 0.0261
+Happy: 0.0006
+Neutral: 0.0013
+Sad: 0.2209
+
+File path: datasets\SAVEE\KL\d11.wav
+True Emotion: Disgust
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0555
+Fear: 0.0000
+Happy: 0.0298
+Neutral: 0.0000
+Sad: 0.9147
+
+File path: datasets\SAVEE\KL\d12.wav
+True Emotion: Disgust
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0007
+Happy: 0.0009
+Neutral: 0.0741
+Sad: 0.9243
+
+File path: datasets\SAVEE\KL\d13.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0107
+Disgust: 0.9772
+Fear: 0.0000
+Happy: 0.0074
+Neutral: 0.0002
+Sad: 0.0044
+
+File path: datasets\SAVEE\KL\d14.wav
+True Emotion: Disgust
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0005
+Disgust: 0.8554
+Fear: 0.0000
+Happy: 0.1388
+Neutral: 0.0042
+Sad: 0.0011
+
+File path: datasets\SAVEE\KL\d15.wav
+True Emotion: Disgust
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.1441
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.8559
+
+File path: datasets\SAVEE\KL\f01.wav
+True Emotion: Fear
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0403
+Disgust: 0.8993
+Fear: 0.0000
+Happy: 0.0013
+Neutral: 0.0534
+Sad: 0.0057
+
+File path: datasets\SAVEE\KL\f02.wav
+True Emotion: Fear
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.2692
+Disgust: 0.0010
+Fear: 0.0152
+Happy: 0.1300
+Neutral: 0.4706
+Sad: 0.1139
+
+File path: datasets\SAVEE\KL\f03.wav
+True Emotion: Fear
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 1.0000
+
+File path: datasets\SAVEE\KL\f04.wav
+True Emotion: Fear
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0002
+Disgust: 0.0005
+Fear: 0.0482
+Happy: 0.4964
+Neutral: 0.0002
+Sad: 0.4546
+
+File path: datasets\SAVEE\KL\f05.wav
+True Emotion: Fear
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0013
+Disgust: 0.8803
+Fear: 0.0000
+Happy: 0.0005
+Neutral: 0.1149
+Sad: 0.0030
+
+File path: datasets\SAVEE\KL\f06.wav
+True Emotion: Fear
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0044
+Disgust: 0.0047
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.9890
+Sad: 0.0019
+
+File path: datasets\SAVEE\KL\f07.wav
+True Emotion: Fear
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0000
+Disgust: 0.1394
+Fear: 0.0000
+Happy: 0.7729
+Neutral: 0.0012
+Sad: 0.0864
+
+File path: datasets\SAVEE\KL\f08.wav
+True Emotion: Fear
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0022
+Disgust: 0.4067
+Fear: 0.0001
+Happy: 0.5489
+Neutral: 0.0000
+Sad: 0.0421
+
+File path: datasets\SAVEE\KL\f09.wav
+True Emotion: Fear
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0002
+Fear: 0.0009
+Happy: 0.0000
+Neutral: 0.0007
+Sad: 0.9981
+
+File path: datasets\SAVEE\KL\f10.wav
+True Emotion: Fear
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 1.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\KL\f11.wav
+True Emotion: Fear
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9503
+Fear: 0.0001
+Happy: 0.0038
+Neutral: 0.0005
+Sad: 0.0453
+
+File path: datasets\SAVEE\KL\f12.wav
+True Emotion: Fear
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.5202
+Fear: 0.0007
+Happy: 0.0001
+Neutral: 0.4784
+Sad: 0.0006
+
+File path: datasets\SAVEE\KL\f13.wav
+True Emotion: Fear
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0009
+Fear: 0.9894
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0097
+
+File path: datasets\SAVEE\KL\f14.wav
+True Emotion: Fear
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9480
+Fear: 0.0000
+Happy: 0.0002
+Neutral: 0.0000
+Sad: 0.0518
+
+File path: datasets\SAVEE\KL\f15.wav
+True Emotion: Fear
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0001
+Disgust: 0.2129
+Fear: 0.0005
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.7864
+
+File path: datasets\SAVEE\KL\h01.wav
+True Emotion: Happy
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0003
+Fear: 0.0000
+Happy: 0.9449
+Neutral: 0.0263
+Sad: 0.0285
+
+File path: datasets\SAVEE\KL\h02.wav
+True Emotion: Happy
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0253
+Neutral: 0.9747
+Sad: 0.0000
+
+File path: datasets\SAVEE\KL\h03.wav
+True Emotion: Happy
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0075
+Happy: 0.8692
+Neutral: 0.1227
+Sad: 0.0006
+
+File path: datasets\SAVEE\KL\h04.wav
+True Emotion: Happy
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0001
+Disgust: 0.1328
+Fear: 0.0001
+Happy: 0.8512
+Neutral: 0.0123
+Sad: 0.0035
+
+File path: datasets\SAVEE\KL\h05.wav
+True Emotion: Happy
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9906
+Fear: 0.0000
+Happy: 0.0087
+Neutral: 0.0000
+Sad: 0.0007
+
+File path: datasets\SAVEE\KL\h06.wav
+True Emotion: Happy
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.1720
+Disgust: 0.0269
+Fear: 0.0000
+Happy: 0.0037
+Neutral: 0.7954
+Sad: 0.0020
+
+File path: datasets\SAVEE\KL\h07.wav
+True Emotion: Happy
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.5764
+Disgust: 0.4168
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0053
+Sad: 0.0015
+
+File path: datasets\SAVEE\KL\h08.wav
+True Emotion: Happy
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0001
+Disgust: 0.0830
+Fear: 0.0055
+Happy: 0.0006
+Neutral: 0.7802
+Sad: 0.1306
+
+File path: datasets\SAVEE\KL\h09.wav
+True Emotion: Happy
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.7687
+Disgust: 0.0000
+Fear: 0.2313
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\KL\h10.wav
+True Emotion: Happy
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.7457
+Disgust: 0.0455
+Fear: 0.2078
+Happy: 0.0000
+Neutral: 0.0006
+Sad: 0.0003
+
+File path: datasets\SAVEE\KL\h11.wav
+True Emotion: Happy
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0347
+Disgust: 0.9644
+Fear: 0.0001
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0008
+
+File path: datasets\SAVEE\KL\h12.wav
+True Emotion: Happy
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0006
+Disgust: 0.3222
+Fear: 0.0021
+Happy: 0.0617
+Neutral: 0.0073
+Sad: 0.6060
+
+File path: datasets\SAVEE\KL\h13.wav
+True Emotion: Happy
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0015
+Disgust: 0.0016
+Fear: 0.0096
+Happy: 0.0004
+Neutral: 0.9515
+Sad: 0.0353
+
+File path: datasets\SAVEE\KL\h14.wav
+True Emotion: Happy
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.7565
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.2435
+
+File path: datasets\SAVEE\KL\h15.wav
+True Emotion: Happy
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9902
+Fear: 0.0078
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0019
+
+File path: datasets\SAVEE\KL\n01.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0595
+Disgust: 0.8428
+Fear: 0.0000
+Happy: 0.0010
+Neutral: 0.0294
+Sad: 0.0672
+
+File path: datasets\SAVEE\KL\n02.wav
+True Emotion: Neutral
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.5797
+Happy: 0.0000
+Neutral: 0.4030
+Sad: 0.0172
+
+File path: datasets\SAVEE\KL\n03.wav
+True Emotion: Neutral
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0006
+Fear: 0.9979
+Happy: 0.0015
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\KL\n04.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.4105
+Disgust: 0.5878
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0017
+
+File path: datasets\SAVEE\KL\n05.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.5184
+Fear: 0.0084
+Happy: 0.0000
+Neutral: 0.4724
+Sad: 0.0009
+
+File path: datasets\SAVEE\KL\n06.wav
+True Emotion: Neutral
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0339
+Fear: 0.0000
+Happy: 0.0011
+Neutral: 0.0000
+Sad: 0.9650
+
+File path: datasets\SAVEE\KL\n07.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0017
+Disgust: 0.9928
+Fear: 0.0020
+Happy: 0.0034
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\KL\n08.wav
+True Emotion: Neutral
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 1.0000
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\KL\n09.wav
+True Emotion: Neutral
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0004
+Fear: 0.0000
+Happy: 0.0017
+Neutral: 0.0000
+Sad: 0.9979
+
+File path: datasets\SAVEE\KL\n10.wav
+True Emotion: Neutral
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0047
+Disgust: 0.0863
+Fear: 0.0000
+Happy: 0.0007
+Neutral: 0.0007
+Sad: 0.9076
+
+File path: datasets\SAVEE\KL\n11.wav
+True Emotion: Neutral
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0091
+Fear: 0.0000
+Happy: 0.5699
+Neutral: 0.0000
+Sad: 0.4210
+
+File path: datasets\SAVEE\KL\n12.wav
+True Emotion: Neutral
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0001
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.9998
+Sad: 0.0000
+
+File path: datasets\SAVEE\KL\n13.wav
+True Emotion: Neutral
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0027
+Fear: 0.0496
+Happy: 0.0003
+Neutral: 0.7163
+Sad: 0.2310
+
+File path: datasets\SAVEE\KL\n14.wav
+True Emotion: Neutral
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.4287
+Fear: 0.0004
+Happy: 0.0034
+Neutral: 0.0002
+Sad: 0.5673
+
+File path: datasets\SAVEE\KL\n15.wav
+True Emotion: Neutral
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0001
+Disgust: 0.0683
+Fear: 0.0001
+Happy: 0.7045
+Neutral: 0.0001
+Sad: 0.2269
+
+File path: datasets\SAVEE\KL\n16.wav
+True Emotion: Neutral
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0000
+Disgust: 0.2862
+Fear: 0.0001
+Happy: 0.2192
+Neutral: 0.4844
+Sad: 0.0101
+
+File path: datasets\SAVEE\KL\n17.wav
+True Emotion: Neutral
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0268
+Happy: 0.0000
+Neutral: 0.9730
+Sad: 0.0002
+
+File path: datasets\SAVEE\KL\n18.wav
+True Emotion: Neutral
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0009
+Fear: 0.2202
+Happy: 0.1614
+Neutral: 0.0030
+Sad: 0.6144
+
+File path: datasets\SAVEE\KL\n19.wav
+True Emotion: Neutral
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0001
+Disgust: 0.0001
+Fear: 0.9968
+Happy: 0.0000
+Neutral: 0.0030
+Sad: 0.0000
+
+File path: datasets\SAVEE\KL\n20.wav
+True Emotion: Neutral
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.1071
+Disgust: 0.0000
+Fear: 0.8927
+Happy: 0.0002
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\KL\n21.wav
+True Emotion: Neutral
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0802
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0001
+Sad: 0.9197
+
+File path: datasets\SAVEE\KL\n22.wav
+True Emotion: Neutral
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0723
+Fear: 0.0388
+Happy: 0.0010
+Neutral: 0.0000
+Sad: 0.8879
+
+File path: datasets\SAVEE\KL\n23.wav
+True Emotion: Neutral
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0023
+Fear: 0.0496
+Happy: 0.0114
+Neutral: 0.9292
+Sad: 0.0075
+
+File path: datasets\SAVEE\KL\n24.wav
+True Emotion: Neutral
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.5745
+Disgust: 0.3193
+Fear: 0.1029
+Happy: 0.0001
+Neutral: 0.0000
+Sad: 0.0032
+
+File path: datasets\SAVEE\KL\n25.wav
+True Emotion: Neutral
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.3982
+Fear: 0.0000
+Happy: 0.0015
+Neutral: 0.0000
+Sad: 0.6003
+
+File path: datasets\SAVEE\KL\n26.wav
+True Emotion: Neutral
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0066
+Fear: 0.0061
+Happy: 0.0115
+Neutral: 0.5717
+Sad: 0.4041
+
+File path: datasets\SAVEE\KL\n27.wav
+True Emotion: Neutral
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.1951
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.8049
+
+File path: datasets\SAVEE\KL\n28.wav
+True Emotion: Neutral
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.4728
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0038
+Sad: 0.5233
+
+File path: datasets\SAVEE\KL\n29.wav
+True Emotion: Neutral
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0377
+Fear: 0.0002
+Happy: 0.0000
+Neutral: 0.8785
+Sad: 0.0836
+
+File path: datasets\SAVEE\KL\n30.wav
+True Emotion: Neutral
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0002
+Disgust: 0.2958
+Fear: 0.0125
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.6916
+
+File path: datasets\SAVEE\KL\sa01.wav
+True Emotion: Sad
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0001
+Disgust: 0.0653
+Fear: 0.6529
+Happy: 0.0002
+Neutral: 0.0003
+Sad: 0.2811
+
+File path: datasets\SAVEE\KL\sa02.wav
+True Emotion: Sad
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0161
+Fear: 0.5114
+Happy: 0.0011
+Neutral: 0.4658
+Sad: 0.0055
+
+File path: datasets\SAVEE\KL\sa03.wav
+True Emotion: Sad
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 1.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\KL\sa04.wav
+True Emotion: Sad
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0039
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0001
+Sad: 0.9959
+
+File path: datasets\SAVEE\KL\sa05.wav
+True Emotion: Sad
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.1795
+Fear: 0.0001
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.8204
+
+File path: datasets\SAVEE\KL\sa06.wav
+True Emotion: Sad
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.5465
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0094
+Sad: 0.4440
+
+File path: datasets\SAVEE\KL\sa07.wav
+True Emotion: Sad
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0009
+Fear: 0.3533
+Happy: 0.0001
+Neutral: 0.0048
+Sad: 0.6409
+
+File path: datasets\SAVEE\KL\sa08.wav
+True Emotion: Sad
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0003
+Disgust: 0.0005
+Fear: 0.9665
+Happy: 0.0000
+Neutral: 0.0199
+Sad: 0.0128
+
+File path: datasets\SAVEE\KL\sa09.wav
+True Emotion: Sad
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0002
+Disgust: 0.0001
+Fear: 0.9998
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\KL\sa10.wav
+True Emotion: Sad
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9667
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0210
+Sad: 0.0123
+
+File path: datasets\SAVEE\KL\sa11.wav
+True Emotion: Sad
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0000
+Disgust: 0.9997
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0003
+
+File path: datasets\SAVEE\KL\sa12.wav
+True Emotion: Sad
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0033
+Disgust: 0.9605
+Fear: 0.0000
+Happy: 0.0008
+Neutral: 0.0000
+Sad: 0.0354
+
+File path: datasets\SAVEE\KL\sa13.wav
+True Emotion: Sad
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0005
+Disgust: 0.0232
+Fear: 0.0005
+Happy: 0.0001
+Neutral: 0.0000
+Sad: 0.9757
+
+File path: datasets\SAVEE\KL\sa14.wav
+True Emotion: Sad
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0077
+Disgust: 0.4098
+Fear: 0.0664
+Happy: 0.1350
+Neutral: 0.3300
+Sad: 0.0511
+
+File path: datasets\SAVEE\KL\sa15.wav
+True Emotion: Sad
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0251
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.9749
+
+File path: datasets\SAVEE\KL\su01.wav
+True Emotion: Unknown
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0005
+Disgust: 0.0559
+Fear: 0.1259
+Happy: 0.0032
+Neutral: 0.0157
+Sad: 0.7987
+
+File path: datasets\SAVEE\KL\su02.wav
+True Emotion: Unknown
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.9579
+Neutral: 0.0420
+Sad: 0.0000
+
+File path: datasets\SAVEE\KL\su03.wav
+True Emotion: Unknown
+Predicted Emotion: Fear
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.5826
+Happy: 0.4174
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\KL\su04.wav
+True Emotion: Unknown
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0003
+Fear: 0.0002
+Happy: 0.0047
+Neutral: 0.3688
+Sad: 0.6260
+
+File path: datasets\SAVEE\KL\su05.wav
+True Emotion: Unknown
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0000
+Happy: 0.0001
+Neutral: 0.9970
+Sad: 0.0029
+
+File path: datasets\SAVEE\KL\su06.wav
+True Emotion: Unknown
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0011
+Fear: 0.0101
+Happy: 0.0001
+Neutral: 0.0577
+Sad: 0.9310
+
+File path: datasets\SAVEE\KL\su07.wav
+True Emotion: Unknown
+Predicted Emotion: Neutral
+Probabilities:
+Anger: 0.0035
+Disgust: 0.0448
+Fear: 0.0000
+Happy: 0.0001
+Neutral: 0.9254
+Sad: 0.0262
+
+File path: datasets\SAVEE\KL\su08.wav
+True Emotion: Unknown
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0320
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.9679
+
+File path: datasets\SAVEE\KL\su09.wav
+True Emotion: Unknown
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9874
+Disgust: 0.0002
+Fear: 0.0006
+Happy: 0.0027
+Neutral: 0.0089
+Sad: 0.0002
+
+File path: datasets\SAVEE\KL\su10.wav
+True Emotion: Unknown
+Predicted Emotion: Anger
+Probabilities:
+Anger: 0.9895
+Disgust: 0.0104
+Fear: 0.0000
+Happy: 0.0000
+Neutral: 0.0000
+Sad: 0.0000
+
+File path: datasets\SAVEE\KL\su11.wav
+True Emotion: Unknown
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0000
+Disgust: 0.0000
+Fear: 0.0028
+Happy: 0.0000
+Neutral: 0.1098
+Sad: 0.8875
+
+File path: datasets\SAVEE\KL\su12.wav
+True Emotion: Unknown
+Predicted Emotion: Disgust
+Probabilities:
+Anger: 0.0015
+Disgust: 0.9786
+Fear: 0.0000
+Happy: 0.0021
+Neutral: 0.0163
+Sad: 0.0015
+
+File path: datasets\SAVEE\KL\su13.wav
+True Emotion: Unknown
+Predicted Emotion: Happy
+Probabilities:
+Anger: 0.0006
+Disgust: 0.2981
+Fear: 0.0008
+Happy: 0.4321
+Neutral: 0.2400
+Sad: 0.0284
+
+File path: datasets\SAVEE\KL\su14.wav
+True Emotion: Unknown
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.0188
+Disgust: 0.0111
+Fear: 0.0066
+Happy: 0.2171
+Neutral: 0.0008
+Sad: 0.7456
+
+File path: datasets\SAVEE\KL\su15.wav
+True Emotion: Unknown
+Predicted Emotion: Sad
+Probabilities:
+Anger: 0.1332
+Disgust: 0.4248
+Fear: 0.0000
+Happy: 0.0005
+Neutral: 0.0000
+Sad: 0.4415
+

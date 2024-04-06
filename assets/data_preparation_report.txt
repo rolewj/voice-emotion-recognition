@@ -1,24 +1,24 @@
 Распределение эмоций:
 Emotions
-Anger      1271
-Disgust    1271
-Fear       1271
-Happy      1271
-Sad        1271
-Neutral    1087
+Anger      1671
+Disgust    1671
+Fear       1671
+Happy      1671
+Sad        1671
+Neutral    1487
 
 Распределение по полу:
 Sex
+Female    5912
 Male      3930
-Female    3512
 
 Распределение эмоций по полу:
 Sex       Female  Male
 Emotions              
-Anger        600   671
-Disgust      600   671
-Fear         600   671
-Happy        600   671
-Neutral      512   575
-Sad          600   671
+Anger       1000   671
+Disgust     1000   671
+Fear        1000   671
+Happy       1000   671
+Neutral      912   575
+Sad         1000   671
 
