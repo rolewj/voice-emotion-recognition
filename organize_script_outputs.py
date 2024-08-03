@@ -4,7 +4,7 @@ import re
 import argparse
 
 # Создание парсера аргументов командной строки
-parser = argparse.ArgumentParser(description="Script for creating a folder and moving files")
+parser = argparse.ArgumentParser(description="Скрипт для создания папки и переноса всех результатов в нее")
 parser.add_argument("--input_folder", type=str, default="assets", help="Путь к папке с входными данными")
 parser.add_argument("--output_folder", type=str, default="results", help="Путь к папке для сохранения результатов")
 args = parser.parse_args()
@@ -62,5 +62,5 @@ with open(txt_file, "w") as file:
     file.write("\nBat file content:\n")
     file.write(bat_content)
 
-print(f"Файлы из папки {input_folder} скопированы в {folder_path}")
-print(f"Инфо: {txt_file}")
+print(f"Файлы из папки {input_folder} скопированы в {folder_path}.")
+print(f"Инфо: {txt_file}.")

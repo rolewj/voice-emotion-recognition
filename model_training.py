@@ -19,6 +19,15 @@ from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping, ReduceLRO
 
 def build_model(num_emotions, input_shape):
     cnn = tf.keras.Sequential([
+        L.Conv1D(512,kernel_size=5, strides=1,padding='same', activation='relu',input_shape=(x_train.shape[1],1)),
+        L.BatchNormalization(),
+        L.MaxPool1D(pool_size=5,strides=2,padding='same'),
+
+        L.Conv1D(512,kernel_size=5,strides=1,padding='same',activation='relu'),
+        L.BatchNormalization(),
+        L.MaxPool1D(pool_size=5,strides=2,padding='same'),
+        Dropout(0.2),
+        
         L.Conv1D(256,kernel_size=5, strides=1,padding='same', activation='relu',input_shape=(x_train.shape[1],1)),
         L.BatchNormalization(),
         L.MaxPool1D(pool_size=3,strides=2,padding='same'),
@@ -28,16 +37,7 @@ def build_model(num_emotions, input_shape):
         L.MaxPool1D(pool_size=3,strides=2,padding='same'),
         Dropout(0.2),
 
-        L.Conv1D(128,kernel_size=5,strides=1,padding='same',activation='relu'),
-        L.BatchNormalization(),
-        L.MaxPool1D(pool_size=3,strides=2,padding='same'),
-
-        L.Conv1D(128,kernel_size=5,strides=1,padding='same',activation='relu'),
-        L.BatchNormalization(),
-        L.MaxPool1D(pool_size=3,strides=2,padding='same'),
-        Dropout(0.2),
-
-        L.Conv1D(64,kernel_size=3,strides=1,padding='same',activation='relu'),
+        L.Conv1D(128,kernel_size=3,strides=1,padding='same',activation='relu'),
         L.BatchNormalization(),
         L.MaxPool1D(pool_size=3,strides=2,padding='same'),
         Dropout(0.2),
@@ -63,7 +63,7 @@ def train_and_evaluate_model(x_train, y_train, x_test, y_test, emotions, emotion
     # Захватываем summary модели
     model_summary = capture_model_summary(cnn)
     
-    # Callbacks
+    # Обратные вызовы
     model_checkpoint = ModelCheckpoint(os.path.join(output_folder, 'cnn_model.h5'), monitor='val_accuracy', save_best_only=True)
     early_stop = EarlyStopping(monitor='val_accuracy', patience=10, restore_best_weights=True)
     lr_reduction = ReduceLROnPlateau(monitor='val_accuracy', patience=3, verbose=1, factor=0.5, min_lr=0.00001)

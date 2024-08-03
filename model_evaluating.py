@@ -1,5 +1,4 @@
 import numpy as np
-import pandas as pd
 import librosa
 import argparse
 import pickle
@@ -14,17 +13,15 @@ emotions_mapping_crema_d = {
     'DIS': 'Disgust',
     'FEA': 'Fear',
     'HAP': 'Happy',
-    'NEU': 'Neutral',
     'SAD': 'Sad',
 }
 
 emotions_mapping_ravdess = {
-    "01": "Neutral",
     "03": "Happy",
     "04": "Sad",
     "05": "Anger",
     "06": "Fear",
-    "07": "Disgust"
+    "07": "Disgust",
 }
 
 emotions_mapping_savee = {
@@ -32,7 +29,6 @@ emotions_mapping_savee = {
     'd': 'Disgust',
     'f': 'Fear',
     'h': 'Happy',
-    'n': 'Neutral',
     'sa': 'Sad',
 }
 
@@ -41,30 +37,8 @@ emotions_mapping_tess = {
     'disgust': 'Disgust',
     'fear': 'Fear',
     'happy': 'Happy',
-    'neutral': 'Neutral',
     'sad': 'Sad',
 }
-
-# Функция для загрузки и предобработки аудиофайлов из датасета
-# def load_samples(data_folder, num_samples_per_emotion=10, random_state=42):
-#     all_files = glob(os.path.join(data_folder, "*.wav"))
-#     samples = {emotion: [] for emotion in emotions_mapping.values()}
-    
-#     np.random.seed(random_state)
-#     np.random.shuffle(all_files)
-    
-#     for file_path in all_files:
-#         file_name = os.path.basename(file_path)
-#         parts = file_name.split('_')
-#         emotion_short = parts[2] if len(parts) > 2 else None
-#         emotion = emotions_mapping.get(emotion_short)
-#         if emotion and len(samples[emotion]) < num_samples_per_emotion:
-#             samples[emotion].append(file_path)
-        
-#         if all(len(files) == num_samples_per_emotion for files in samples.values()):
-#             break
-    
-#     return samples
 
 def zcr(data, frame_length=2048, hop_length=512):
     return np.squeeze(librosa.feature.zero_crossing_rate(data, frame_length=frame_length, hop_length=hop_length))
@@ -116,7 +90,7 @@ def predict_emotion_from_file(file_path, scaler2):
     print("Формат входных данных для модели:", model_input_features.shape)
     return model_input_features
 
-def predict_and_report_modified(model, path, output_path, emotion_labels, scaler2, encoder2):
+def predict_and_report(model, path, output_path, emotion_labels, scaler2, encoder2):
     reports = []
     true_labels = []
     predicted_labels = []
@@ -188,7 +162,7 @@ def predict_and_report_modified(model, path, output_path, emotion_labels, scaler
         emotion_counts[predicted_emotion] += 1
 
         report = f"File path: {file_path}\nTrue Emotion: {true_emotion}\nPredicted Emotion: {predicted_emotion}\nProbabilities:\n"
-        class_probabilities = predictions.flatten()  # Преобразуем предсказания для удобства отчета
+        class_probabilities = predictions.flatten()
         for label, prob in zip(emotion_labels, class_probabilities):
             report += f"{label}: {prob:.4f}\n"
         report += "\n"
@@ -236,7 +210,7 @@ def load_pickle(pickle_path):
     return scaler2, encoder2
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Распознавание эмоций из аудиофайлов и генерация отчета")
+    parser = argparse.ArgumentParser(description="Распознавание эмоций из аудиофайлов и генерация отчета.")
     parser.add_argument("--data_folder", type=str, required=True, help="Путь к папке с датасетом.")
     parser.add_argument("--model_path", type=str, required=True, help="Путь к обученной .h5 модели.")
     parser.add_argument("--pickle_path", type=str, required=True, help="Путь к .pickle файлам.")
@@ -248,15 +222,10 @@ if __name__ == "__main__":
     # Загрузка модели
     model = load_model(args.model_path)
     
-    # Загрузка и предобработка данных
-    # samples = load_samples(args.data_folder)
-    
     # Загрузка pickle файлов
     scaler2, encoder2 = load_pickle(args.pickle_path)
     
     # Выполнение предсказаний и генерация отчета
-    # predict_and_report(model, samples, args.output_folder, emotion_labels, scaler2, encoder2)
-    
-    predict_and_report_modified(model, args.data_folder, args.output_folder, args.emotions, scaler2, encoder2)
+    predict_and_report(model, args.data_folder, args.output_folder, args.emotions, scaler2, encoder2)
     
     print(f"Оценка прошла успешно. Данные сохранены в папку '{args.output_folder}'")

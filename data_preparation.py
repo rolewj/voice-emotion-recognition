@@ -6,11 +6,7 @@ import re
 import argparse
 import pickle
 from glob import glob
-import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
-from reportlab.lib.pagesizes import letter
-from reportlab.pdfgen import canvas
-from reportlab.lib.utils import ImageReader
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from joblib import Parallel, delayed
 
@@ -85,11 +81,9 @@ def crema_d_load_and_preprocess_data(audios_folder):
         emotion_level_list.append(emotion_level)
         sex_list.append(sex)
 
-    # Создание DataFrame
     crema_df = pd.DataFrame({
         'Path': path_list,
         'Emotions': emotion_list,
-    #   'Emotion levels': emotion_level_list,
         'Sex': sex_list
     })
     
@@ -115,14 +109,11 @@ def ravdess_load_and_preprocess_data(audios_folder):
         parts = filename.split('-')
         emotion = emotions_mapping_ravdess.get(parts[2], 'Unknown')
         actor = int(parts[6].replace(".wav", ""))
-
-        # Определение пола актёра по идентификатору: чётные - женщины, нечётные - мужчины
         sex = 'Female' if actor % 2 == 0 else 'Male'
 
         emotion_list.append(emotion)
         sex_list.append(sex)
 
-    # Создание DataFrame
     ravdess_df = pd.DataFrame({
         'Path': path_list,
         'Emotions': emotion_list,
@@ -153,7 +144,6 @@ def savee_load_and_preprocess_data(audios_folder):
         emotion_list.append(emotion)
         sex_list.append(sex)
 
-    # Создание DataFrame
     savee_df = pd.DataFrame({
         'Path': path_list,
         'Emotions': emotion_list,
@@ -178,7 +168,6 @@ def tess_load_and_preprocess_data(audios_folder):
         emotion_list.append(emotion)
         sex_list.append(sex)
 
-    # Создание DataFrame
     tess_df = pd.DataFrame({
         'Path': path_list,
         'Emotions': emotion_list,
@@ -211,7 +200,7 @@ def load_and_preprocess_datasets(dataset_paths, emotions_list):
         combined_df = pd.concat([combined_df, df], ignore_index=True)
     
     if emotions_list:
-        # Создаем словарь для сопоставления эмоций
+        # Словарь для сопоставления эмоций
         emotion_mapping = {
             'Anger': ['Anger', 'Angry'],
             'Happy': ['Happy'],
@@ -301,47 +290,6 @@ def parallel_feature_extraction(df):
 
     return Features
 
-# def preprocess_features(Features, output_folder):
-#     Features = Features.fillna(0)
-
-#     X = Features.iloc[:, :-2].values
-#     Y = Features['labels'].values
-
-#     # Сохранение путей к файлам
-#     file_path_with_emotions = Features['file_path_with_emotion'].tolist()
-
-#     encoder = OneHotEncoder()
-#     Y = encoder.fit_transform(np.array(Y).reshape(-1, 1)).toarray()
-    
-#     encoder_file_path = os.path.join(output_folder, 'encoder.pickle')
-#     with open(encoder_file_path, 'wb') as f:
-#         pickle.dump(encoder, f)
-
-#     x_train, x_test, y_train, y_test, train_paths_with_emotions, test_paths_with_emotions = train_test_split(X, Y, file_path_with_emotions, random_state=0, shuffle=True)
-
-#     scaler = StandardScaler()
-#     x_train = scaler.fit_transform(x_train)
-#     x_test = scaler.transform(x_test)
-
-#     scaler_file_path = os.path.join(output_folder, 'scaler.pickle')
-#     with open(scaler_file_path, 'wb') as f:
-#         pickle.dump(scaler, f)
-
-#     print("Encoder и Scaler успешно загружены.")
-
-#     x_train = np.expand_dims(x_train, axis=2)
-#     x_test = np.expand_dims(x_test, axis=2)
-    
-#     train_paths_file = os.path.join(output_folder, 'train_paths_with_emotions.txt')
-#     with open(train_paths_file, 'w') as f:
-#         f.write('\n'.join(train_paths_with_emotions))
-    
-#     test_paths_file = os.path.join(output_folder, 'test_paths_with_emotions.txt')
-#     with open(test_paths_file, 'w') as f:
-#         f.write('\n'.join(test_paths_with_emotions))
-
-#     return x_train, x_test, y_train, y_test
-
 def preprocess_features_with_stratified_split(Features, output_folder, test_size_per_class):
     Features = Features.fillna(0)
     
@@ -357,7 +305,7 @@ def preprocess_features_with_stratified_split(Features, output_folder, test_size
     with open(encoder_file_path, 'wb') as f:
         pickle.dump(encoder, f)
 
-    # Разделение данных на обучающую и тестовую выборки с фиксированным количеством записей для каждой эмоции и каждого датасета
+    # Разделение данных на обучающую и валидационную выборки, выделяя процент от записей для каждой эмоции каждого датасета в валидационную выборку
     X_train, X_test, Y_train, Y_test, train_paths, test_paths = [], [], [], [], [], []
     for emotion in np.unique(Y):
         for dataset_pattern in ['^\d{4}_\w{3}_\w{3}_\w{2}\.wav$', '^\d{2}-\d{2}-\d{2}-\d{2}-\d{2}-\d{2}-\d{2}\.wav$', '^[a-z]{1,2}\d{2}\.wav$', '^\w{3}_\w+_\w+\.wav$']:
@@ -366,13 +314,11 @@ def preprocess_features_with_stratified_split(Features, output_folder, test_size
             Y_emotion = Y_encoded[emotion_indices]
             paths_emotion = [file_path_with_emotions[i] for i in emotion_indices]
 
-            if len(X_emotion) >= test_size_per_class:
-                test_indices = np.random.choice(len(X_emotion), test_size_per_class, replace=False)
-                train_indices = np.setdiff1d(np.arange(len(X_emotion)), test_indices)
-                X_train_emotion, X_test_emotion = X_emotion[train_indices], X_emotion[test_indices]
-                Y_train_emotion, Y_test_emotion = Y_emotion[train_indices], Y_emotion[test_indices]
-                train_paths_emotion = [paths_emotion[i] for i in train_indices]
-                test_paths_emotion = [paths_emotion[i] for i in test_indices]
+            test_size = int(len(X_emotion) * test_size_per_class)
+            if len(X_emotion) >= 2 * test_size and test_size > 0:
+                X_train_emotion, X_test_emotion, Y_train_emotion, Y_test_emotion, train_paths_emotion, test_paths_emotion = train_test_split(
+                    X_emotion, Y_emotion, paths_emotion, test_size=test_size, stratify=Y_emotion, random_state=42
+                )
                 X_train.append(X_train_emotion)
                 X_test.append(X_test_emotion)
                 Y_train.append(Y_train_emotion)
@@ -406,10 +352,32 @@ def preprocess_features_with_stratified_split(Features, output_folder, test_size
     with open(test_paths_file, 'w') as f:
         f.write('\n'.join(test_paths))
 
-    return x_train, x_test, y_train, y_test
+    return x_train, x_test, y_train, y_test, train_paths, test_paths
 
-def save_report(df, report_path):
+
+
+def save_report(df, report_path, x_train, x_test, y_train, y_test, train_paths, test_paths):
     with open(os.path.join(report_path, "data_preparation_report.txt"), 'w') as f:
+        # Добавление информации о размерах выборок
+        total_files = len(df)
+        test_files = len(test_paths)
+
+        # Создание текстового отчета
+        report_text = f"""
+        Общая информация:
+        Всего аудиофайлов: {total_files}
+        Количество аудиофайлов в тренировочной выборке: {total_files - test_files}
+        Количество аудиофайлов в тестовой выборке: {test_files}
+
+        Размеры выборок:
+        Размер X_train: {x_train.shape}
+        Размер y_train: {y_train.shape}
+        Размер X_test: {x_test.shape}
+        Размер y_test: {y_test.shape}
+        """
+        f.write(report_text)
+        f.write("\n\n")
+        
         # Распределение эмоций
         emotion_distrib = df['Emotions'].value_counts()
         f.write("Распределение эмоций:\n")
@@ -446,9 +414,10 @@ if __name__ == "__main__":
         os.makedirs(args.output_folder)
     
     df = load_and_preprocess_datasets(args.datasets, args.emotions)
-    save_report(df, args.output_folder)
     Features = parallel_feature_extraction(df)
-    # x_train, x_test, y_train, y_test = preprocess_features(Features, args.output_folder)
-    x_train, x_test, y_train, y_test = preprocess_features_with_stratified_split(Features, args.output_folder, 10)
+    
+    # Разделение данных на обучающую и валидационную выборки, выделяя 20% записей для каждой эмоции каждого датасета в валидационную выборку
+    x_train, x_test, y_train, y_test, train_paths, test_paths = preprocess_features_with_stratified_split(Features, args.output_folder, 0.2)
+    save_report(df, args.output_folder, x_train, x_test, y_train, y_test, train_paths, test_paths)
     save_data(x_train, x_test, y_train, y_test, args.output_folder)
     print(f"Предобработка данных завершена. Данные сохранены в папку '{args.output_folder}'")
